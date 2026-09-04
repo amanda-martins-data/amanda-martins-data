@@ -59,7 +59,7 @@ Estou concluindo pós-graduação em **Arquitetura de Dados** e em transição d
 ### 01 · Pipeline ETL/ELT com dados ambientais
 `Python` `dbt` `PostgreSQL` `Power BI`
 Ingestão e transformação de dados ambientais públicos (qualidade do ar / clima / recursos hídricos), com modelagem dimensional e dashboard analítico.
-📁 *em breve*
+📁 [Repositório](https://github.com/amanda-martins-data/pipeline-qualidade-ar)
 
 ### 02 · Orquestração de pipeline com Airflow
 `Airflow` `Python` `Docker`
