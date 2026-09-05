@@ -64,7 +64,7 @@ Ingestão e transformação de dados ambientais públicos (qualidade do ar / cli
 ### 02 · Orquestração de pipeline com Airflow
 `Airflow` `Python` `Docker`
 Pipeline sob orquestração de produção: agendamento, retries, alertas de falha e dependências entre tasks.
-📁 *em breve*
+📁 [Repositório](https://github.com/amanda-martins-data/orquestracao-airflow-qualidade-ar)
 
 ### 03 · Arquitetura Medallion (Bronze/Silver/Gold)
 `Data Lake` `Parquet` `ADR`
