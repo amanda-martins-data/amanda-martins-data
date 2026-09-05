@@ -69,7 +69,7 @@ Pipeline sob orquestração de produção: agendamento, retries, alertas de falh
 ### 03 · Arquitetura Medallion (Bronze/Silver/Gold)
 `Data Lake` `Parquet` `ADR`
 Data lake estruturado em camadas, com documentação de decisões arquiteturais (ADRs) sobre particionamento, formatos e schema evolution.
-📁 *em breve*
+📁 [Repositório](https://github.com/amanda-martins-data/arquitetura-medallion-qualidade-ar)
 
 ### 04 · Infraestrutura como código para pipeline cloud
 `Terraform` `AWS/GCP` `IaC`
