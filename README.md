@@ -99,7 +99,7 @@ Data pipeline provisioned via Terraform: storage, serverless function and manage
 ### 05 · AI-Integrated Pipeline
 `Claude` `LLMs` `Data Quality`
 AI agent applied to data quality checks and automatic pipeline documentation generation.
-📁 *coming soon*
+📁 [Repository](https://github.com/amanda-martins-data/ai-pipeline-qualidade-ar)
 
 ### 06 · Data Observability & Quality
 `dbt tests` `Great Expectations` `Monitoring`
