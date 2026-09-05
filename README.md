@@ -104,7 +104,7 @@ AI agent applied to data quality checks and automatic pipeline documentation gen
 ### 06 · Data Observability & Quality
 `dbt tests` `Great Expectations` `Monitoring`
 Data tests and monitoring dashboard for quality and freshness across the pipelines above.
-📁 *coming soon*
+📁 [Repository](https://github.com/amanda-martins-data/observabilidade-qualidade-ar)
 
 ---
 
