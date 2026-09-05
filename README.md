@@ -9,86 +9,106 @@
 ```python
 class AmandaMartins:
     def __init__(self):
-        self.background   = "Engenharia Ambiental"
-        self.current_role = "Analista de Dados Pleno"
-        self.focus_areas  = ["Data Pipelines", "Data Architecture", "AI Integration"]
-        self.stack        = ["Python", "SQL", "Power BI", "dbt", "Airflow", "Claude/LLMs"]
-        self.migrating_to = "Engenharia / Arquitetura de Dados"
+        self.experience    = "6+ years in Data"
+        self.current_role  = "Data Analyst -> Data Engineering"
+        self.background     = "Environmental Engineering"
+        self.focus_areas    = ["ETL/ELT Pipelines", "REST API Integration", "Data Architecture"]
+        self.stack          = ["Python", "SQL", "ADLS Gen2", "DuckDB", "Power BI", "Claude/LLMs"]
+        self.pursuing        = "Post-Graduate in Data Architecture, PUC Minas (2026)"
 
     def current_work(self):
         return [
-            "Desenvolvimento e manutenção de pipelines de dados",
-            "Planejamento de arquitetura de dados",
-            "Implantação de soluções com Claude/LLMs em produção",
-            "Deploy de interfaces desenvolvidas com IA",
+            "Designing ETL pipelines and REST API integrations",
+            "Building data adapters with Python, SQL, ADLS Gen2, DuckDB",
+            "Delivering dashboards, KPI frameworks and reporting solutions",
+            "Deploying AI-powered interfaces in production",
         ]
 ```
 
 ---
 
-## Sobre
+## About
 
-Engenheira ambiental de formação, atuo há 1 ano como Analista de Dados Pleno — com bagagem prévia em Power BI — em uma empresa onde minha atuação real está muito mais próxima de **engenharia de dados**: pipelines, arquitetura e implantação de soluções com IA em produção.
+Data professional with 6+ years of experience translating complex, multi-source datasets into actionable insights and scalable data infrastructure. Currently working as a Data Analyst while progressively taking on Data Engineering responsibilities: designing ETL pipelines, building REST API integrations, and developing data adapters using Python, SQL, ADLS Gen2, and DuckDB.
 
-Estou concluindo pós-graduação em **Arquitetura de Dados** e em transição de carreira para Engenharia/Arquitetura de Dados.
+My background spans Business Intelligence, data governance, and analytical modeling, with a track record of delivering dashboards, KPI frameworks, and reporting solutions across infrastructure, sustainability (ESG), and education sectors.
+
+As a trained Environmental Engineer, I bring domain expertise in spatial data (QGIS/ArcGIS), ESG regulatory frameworks (GRI, ISE B3, DJSI), and environmental monitoring data — adding a strategic, cross-domain layer to my analytics work that purely technical profiles often lack.
+
+Currently pursuing a Post-Graduate degree in Data Architecture at PUC Minas (2026), reinforcing my path toward senior and architect-level data roles.
 
 ---
 
-## Stack
+## Technical Stack
+
+- **Languages & Frameworks:** Python · SQL · JavaScript
+- **CI/CD:** GitHub Actions · Azure DevOps
+- **Data Engineering:** ETL/ELT Pipelines · REST API Integration · ADLS Gen2 · DuckDB · Data Adapters
+- **BI & Analytics:** Power BI · Data Modeling · KPI Design · Statistical Analysis · Data Storytelling · DAX
+- **Spatial & Domain:** QGIS · ArcGIS · ESG Reporting · Environmental Data Monitoring
+- **Methodologies:** GRI · ISE B3 · DJSI · Lean Six Sigma Green Belt
 
 <div align="left">
 
 <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" />
 <img src="https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=postgresql&logoColor=white" />
+<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" />
 <img src="https://img.shields.io/badge/Power_BI-F2C811?style=flat-square&logo=powerbi&logoColor=black" />
-<img src="https://img.shields.io/badge/dbt-FF694B?style=flat-square&logo=dbt&logoColor=white" />
-<img src="https://img.shields.io/badge/Airflow-017CEE?style=flat-square&logo=apacheairflow&logoColor=white" />
-<img src="https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazonaws&logoColor=white" />
-<img src="https://img.shields.io/badge/Terraform-7B42BC?style=flat-square&logo=terraform&logoColor=white" />
-<img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" />
+<img src="https://img.shields.io/badge/Azure-0078D4?style=flat-square&logo=microsoftazure&logoColor=white" />
+<img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white" />
+<img src="https://img.shields.io/badge/DuckDB-FFF000?style=flat-square&logo=duckdb&logoColor=black" />
+<img src="https://img.shields.io/badge/QGIS-589632?style=flat-square&logo=qgis&logoColor=white" />
 <img src="https://img.shields.io/badge/Claude-D97757?style=flat-square&logo=anthropic&logoColor=white" />
 
 </div>
 
 ---
 
-## Projetos
+## Open To
 
-*Projetos em desenvolvimento — cada um documentado com contexto, arquitetura e decisões técnicas.*
+**Senior Data Analyst · Data Engineer · Analytics Engineer**
 
-### 01 · Pipeline ETL/ELT com dados ambientais
-`Python` `dbt` `PostgreSQL` `Power BI`
-Ingestão e transformação de dados ambientais públicos (qualidade do ar / clima / recursos hídricos), com modelagem dimensional e dashboard analítico.
-📁 [Repositório](https://github.com/amanda-martins-data/pipeline-qualidade-ar)
-
-### 02 · Orquestração de pipeline com Airflow
-`Airflow` `Python` `Docker`
-Pipeline sob orquestração de produção: agendamento, retries, alertas de falha e dependências entre tasks.
-📁 [Repositório](https://github.com/amanda-martins-data/orquestracao-airflow-qualidade-ar)
-
-### 03 · Arquitetura Medallion (Bronze/Silver/Gold)
-`Data Lake` `Parquet` `ADR`
-Data lake estruturado em camadas, com documentação de decisões arquiteturais (ADRs) sobre particionamento, formatos e schema evolution.
-📁 [Repositório](https://github.com/amanda-martins-data/arquitetura-medallion-qualidade-ar)
-
-### 04 · Infraestrutura como código para pipeline cloud
-`Terraform` `AWS/GCP` `IaC`
-Pipeline de dados provisionado via Terraform: storage, função serverless e banco gerenciado versionados como código.
-📁 *em breve*
-
-### 05 · Pipeline com IA integrada
-`Claude` `LLMs` `Data Quality`
-Agente de IA aplicado a checagem de qualidade de dados e geração automática de documentação de pipeline.
-📁 *em breve*
-
-### 06 · Observabilidade e qualidade de dados
-`dbt tests` `Great Expectations` `Monitoring`
-Testes de dados e dashboard de monitoramento de qualidade e freshness sobre um dos pipelines acima.
-📁 *em breve*
+Remote · Hybrid — National & International
 
 ---
 
-## Contato
+## Projects
+
+*Projects in progress — each documented with context, architecture and technical decisions.*
+
+### 01 · ETL/ELT Pipeline for Environmental Data
+`Python` `dbt` `PostgreSQL` `Power BI`
+Ingestion and transformation of public environmental data (air quality / climate / water resources), with dimensional modeling and analytical dashboard.
+📁 [Repository](https://github.com/amanda-martins-data/pipeline-qualidade-ar)
+
+### 02 · Pipeline Orchestration with Airflow
+`Airflow` `Python` `Docker`
+Production-grade pipeline orchestration: scheduling, retries, failure alerts and task dependencies.
+📁 [Repository](https://github.com/amanda-martins-data/orquestracao-airflow-qualidade-ar)
+
+### 03 · Medallion Architecture (Bronze/Silver/Gold)
+`Data Lake` `Parquet` `ADR`
+Layered data lake with documented architectural decisions (ADRs) on partitioning, file formats and schema evolution.
+📁 [Repository](https://github.com/amanda-martins-data/arquitetura-medallion-qualidade-ar)
+
+### 04 · Infrastructure as Code for a Cloud Pipeline
+`Terraform` `AWS/GCP` `IaC`
+Data pipeline provisioned via Terraform: storage, serverless function and managed database versioned as code.
+📁 *coming soon*
+
+### 05 · AI-Integrated Pipeline
+`Claude` `LLMs` `Data Quality`
+AI agent applied to data quality checks and automatic pipeline documentation generation.
+📁 *coming soon*
+
+### 06 · Data Observability & Quality
+`dbt tests` `Great Expectations` `Monitoring`
+Data tests and monitoring dashboard for quality and freshness across the pipelines above.
+📁 *coming soon*
+
+---
+
+## Contact
 
 <div align="left">
 
