@@ -94,7 +94,7 @@ Layered data lake with documented architectural decisions (ADRs) on partitioning
 ### 04 · Infrastructure as Code for a Cloud Pipeline
 `Terraform` `AWS/GCP` `IaC`
 Data pipeline provisioned via Terraform: storage, serverless function and managed database versioned as code.
-📁 *coming soon*
+📁 [Repository](https://github.com/amanda-martins-data/iac-pipeline-cloud-qualidade-ar)
 
 ### 05 · AI-Integrated Pipeline
 `Claude` `LLMs` `Data Quality`
