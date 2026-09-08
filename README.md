@@ -108,6 +108,13 @@ Data tests and monitoring dashboard for quality and freshness across the pipelin
 
 ---
 
+### 07 · Architecture Decision Records
+`ADR` `System Design` `Data Governance`
+Formal ADRs documenting the architecture trade-offs behind the pipelines above, plus prospective decisions on modeling, schema evolution and streaming.
+📁 [Repository](https://github.com/amanda-martins-data/adr-arquitetura-dados)
+
+---
+
 ## Contact
 
 <div align="left">
