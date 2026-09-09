@@ -136,6 +136,13 @@ Tested cost and capacity model for the real Project 04 infrastructure - exact br
 
 ---
 
+### 11 · Data Security & Access Architecture
+`RBAC` `PII Masking` `Audit Trail`
+Tested RBAC engine applying the Project 08 catalog's roles and sensitivity levels - PII masking as a second, independent defense layer plus an append-only audit log.
+📁 [Repository](https://github.com/amanda-martins-data/seguranca-acesso-dados)
+
+---
+
 ## Contact
 
 <div align="left">
