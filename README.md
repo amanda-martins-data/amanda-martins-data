@@ -115,6 +115,13 @@ Formal ADRs documenting the architecture trade-offs behind the pipelines above, 
 
 ---
 
+### 08 · Data Governance & Catalog
+`Governance` `Data Catalog` `LGPD`
+Governance framework (roles, RACI, retention policy, LGPD-mapped classification) plus a working data catalog that validates YAML dataset definitions and renders lineage across the pipelines above.
+📁 [Repository](https://github.com/amanda-martins-data/governanca-catalogo-dados)
+
+---
+
 ## Contact
 
 <div align="left">
