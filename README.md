@@ -122,6 +122,13 @@ Governance framework (roles, RACI, retention policy, LGPD-mapped classification)
 
 ---
 
+### 09 · Corporate Data Architecture Blueprint
+`System Design` `Star Schema` `Multi-tenant`
+Full architecture document (conceptual, logical, physical models, NFRs, DR) for a fictional multi-tenant environmental monitoring org - no code, the kind of deliverable produced before implementation starts.
+📁 [Repository](https://github.com/amanda-martins-data/blueprint-arquitetura-corporativa)
+
+---
+
 ## Contact
 
 <div align="left">
