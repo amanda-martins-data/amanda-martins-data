@@ -129,6 +129,13 @@ Full architecture document (conceptual, logical, physical models, NFRs, DR) for 
 
 ---
 
+### 10 · Capacity Planning & Cost Model
+`Scalability` `AWS Cost` `Capacity Planning`
+Tested cost and capacity model for the real Project 04 infrastructure - exact breakpoint (Lambda timeout at 45.2x baseline volume) computed algebraically, not guessed, with a prioritized re-architecture plan.
+📁 [Repository](https://github.com/amanda-martins-data/capacity-planning-qualidade-ar)
+
+---
+
 ## Contact
 
 <div align="left">
