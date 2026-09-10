@@ -46,6 +46,7 @@ class AmandaMartins:
 </td>
 </tr>
 </table>
+
 ## About
 
 Data professional with 6+ years of experience translating complex, multi-source datasets into actionable insights and scalable data infrastructure. Currently working as a Data Analyst while progressively taking on Data Engineering responsibilities: designing ETL pipelines, building REST API integrations, and developing data adapters using Python, SQL, ADLS Gen2, and DuckDB.
