@@ -143,6 +143,13 @@ Tested RBAC engine applying the Project 08 catalog's roles and sensitivity level
 
 ---
 
+### 12 · Event-Driven Architecture (Streaming)
+`Kafka-style` `Schema Registry` `Event-Driven`
+Tested schema registry (backward/forward/full compatibility) and in-memory event bus (partitioning, ordering, at-least-once delivery), comparing batch vs streaming latency on the real Project 10 baseline.
+📁 [Repository](https://github.com/amanda-martins-data/streaming-qualidade-ar)
+
+---
+
 ## Contact
 
 <div align="left">
