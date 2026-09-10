@@ -81,25 +81,35 @@ Remote · Hybrid — National & International
 Ingestion and transformation of public environmental data (air quality / climate / water resources), with dimensional modeling and analytical dashboard.
 📁 [Repository](https://github.com/amanda-martins-data/pipeline-qualidade-ar)
 
+---
+
 ### 02 · Pipeline Orchestration with Airflow
 `Airflow` `Python` `Docker`
 Production-grade pipeline orchestration: scheduling, retries, failure alerts and task dependencies.
 📁 [Repository](https://github.com/amanda-martins-data/orquestracao-airflow-qualidade-ar)
+
+---
 
 ### 03 · Medallion Architecture (Bronze/Silver/Gold)
 `Data Lake` `Parquet` `ADR`
 Layered data lake with documented architectural decisions (ADRs) on partitioning, file formats and schema evolution.
 📁 [Repository](https://github.com/amanda-martins-data/arquitetura-medallion-qualidade-ar)
 
+---
+
 ### 04 · Infrastructure as Code for a Cloud Pipeline
 `Terraform` `AWS/GCP` `IaC`
 Data pipeline provisioned via Terraform: storage, serverless function and managed database versioned as code.
 📁 [Repository](https://github.com/amanda-martins-data/iac-pipeline-cloud-qualidade-ar)
 
+---
+
 ### 05 · AI-Integrated Pipeline
 `Claude` `LLMs` `Data Quality`
 AI agent applied to data quality checks and automatic pipeline documentation generation.
 📁 [Repository](https://github.com/amanda-martins-data/ai-pipeline-qualidade-ar)
+
+---
 
 ### 06 · Data Observability & Quality
 `dbt tests` `Great Expectations` `Monitoring`
