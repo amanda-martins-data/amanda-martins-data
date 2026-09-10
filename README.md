@@ -6,15 +6,34 @@
 
 </div>
 
-```python
+<table>
+<tr>
+<td width="340" valign="top">
+<pre>
+  ┌───────────────────────┐
+  │                       │
+  │   ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓   │  GOLD
+  │   ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓   │
+  ├───────────────────────┤
+  │   ░░░░░░░░░░░░░░░░░   │  SILVER
+  │   ░░░░░░░░░░░░░░░░░   │
+  ├───────────────────────┤
+  │   ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒   │  BRONZE
+  │   ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒   │
+  └───────────────────────┘
+      medallion architecture
+</pre>
+</td>
+<td valign="top">
+<pre>
 class AmandaMartins:
     def __init__(self):
         self.experience    = "6+ years in Data"
         self.current_role  = "Data Analyst -> Data Engineering"
-        self.background     = "Environmental Engineering"
-        self.focus_areas    = ["ETL/ELT Pipelines", "REST API Integration", "Data Architecture"]
-        self.stack          = ["Python", "SQL", "ADLS Gen2", "DuckDB", "Power BI", "Claude/LLMs"]
-        self.pursuing        = "Post-Graduate in Data Architecture, PUC Minas (2026)"
+        self.background    = "Environmental Engineering"
+        self.focus_areas   = ["ETL/ELT Pipelines", "REST API Integration", "Data Architecture"]
+        self.stack         = ["Python", "SQL", "ADLS Gen2", "DuckDB", "Power BI", "Claude/LLMs"]
+        self.pursuing      = "Post-Graduate in Data Architecture, PUC Minas (2026)"
 
     def current_work(self):
         return [
@@ -23,10 +42,10 @@ class AmandaMartins:
             "Delivering dashboards, KPI frameworks and reporting solutions",
             "Deploying AI-powered interfaces in production",
         ]
-```
-
----
-
+</pre>
+</td>
+</tr>
+</table>
 ## About
 
 Data professional with 6+ years of experience translating complex, multi-source datasets into actionable insights and scalable data infrastructure. Currently working as a Data Analyst while progressively taking on Data Engineering responsibilities: designing ETL pipelines, building REST API integrations, and developing data adapters using Python, SQL, ADLS Gen2, and DuckDB.
