@@ -4,19 +4,17 @@
 
 `data_engineer.py`
 
+</div>
 
-</pre>
-</td>
-<td valign="top">
-<pre>
+```python
 class AmandaMartins:
     def __init__(self):
         self.experience    = "6+ years in Data"
         self.current_role  = "Data Analyst -> Data Engineering"
-        self.background    = "Environmental Engineering"
-        self.focus_areas   = ["ETL/ELT Pipelines", "REST API Integration", "Data Architecture"]
-        self.stack         = ["Python", "SQL", "ADLS Gen2", "DuckDB", "Power BI", "Claude/LLMs"]
-        self.pursuing      = "Post-Graduate in Data Architecture, PUC Minas (2026)"
+        self.background     = "Environmental Engineering"
+        self.focus_areas    = ["ETL/ELT Pipelines", "REST API Integration", "Data Architecture"]
+        self.stack          = ["Python", "SQL", "ADLS Gen2", "DuckDB", "Power BI", "Claude/LLMs"]
+        self.pursuing        = "Post-Graduate in Data Architecture, PUC Minas (2026)"
 
     def current_work(self):
         return [
@@ -25,10 +23,9 @@ class AmandaMartins:
             "Delivering dashboards, KPI frameworks and reporting solutions",
             "Deploying AI-powered interfaces in production",
         ]
-</pre>
-</td>
-</tr>
-</table>
+```
+
+---
 
 ## About
 
