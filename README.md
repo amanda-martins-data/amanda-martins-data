@@ -160,6 +160,13 @@ Tested schema registry (backward/forward/full compatibility) and in-memory event
 
 ---
 
+### 13 · Multi-Source Environmental Pipeline
+`Entity Resolution` `Dirty Data` `Data Integration`
+Real, dirty public data from three sources (INMET weather, CETESB air quality via OpenAQ, IBGE) joined on the municipality dimension - 5M+ rows of latin-1 CSVs, and a tested layered resolver built on the finding that 9.4% of Brazilian municipalities cannot be identified by name alone.
+[Repository](https://github.com/amanda-martins-data/pipeline-multi-fonte-ambiental)
+
+---
+
 ## Contact
 
 <div align="left">
