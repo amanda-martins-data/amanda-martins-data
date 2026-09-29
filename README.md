@@ -13,7 +13,8 @@ class AmandaMartins:
         self.current_role  = "Data Analyst -> Data Engineering"
         self.background     = "Environmental Engineering"
         self.focus_areas    = ["ETL/ELT Pipelines", "REST API Integration", "Data Architecture"]
-        self.stack          = ["Python", "SQL", "ADLS Gen2", "DuckDB", "Power BI", "Claude/LLMs"]
+        self.stack          = ["Python", "SQL", "PostgreSQL", "dbt", "DuckDB", "Airflow",
+                               "Terraform/AWS", "ADLS Gen2", "Power BI", "Claude/LLMs"]
         self.pursuing        = "Post-Graduate in Data Architecture, PUC Minas (2026)"
 
     def current_work(self):
@@ -41,38 +42,42 @@ Currently pursuing a Post-Graduate degree in Data Architecture at PUC Minas (202
 
 ## Technical Stack
 
-*Split by where each skill was used. **Professional**: day-to-day in my current and past roles. **Portfolio**: applied hands-on in the projects below (project numbers in parentheses).*
+**At work, every day**
 
-| Area | Professional | Portfolio |
-|---|---|---|
-| **Languages** | Python · SQL · JavaScript | Python · SQL |
-| **Data Engineering** | ETL/ELT · REST API integration · ADLS Gen2 · DuckDB · data adapters | dbt + DuckDB (01-03) · Medallion architecture with Parquet/PyArrow (03) · entity resolution on dirty public data (13) |
-| **Orchestration & Infra** | GitHub Actions · Azure DevOps | Airflow + Docker (02) · Terraform on AWS: Lambda, RDS PostgreSQL, EventBridge, Secrets Manager, IAM (04) |
-| **Data Quality & Testing** | | Great Expectations (06) · pytest test suites (04-06, 08, 10-13) |
-| **Architecture & Governance** | Data governance | ADRs (07, 13) · dimensional modeling decisions (07, 09) · capacity & cost modeling (10) · catalog, lineage & LGPD classification (08) · RBAC & PII masking (11) · schema registry & event-driven design (12) |
-| **AI** | AI-powered interfaces in production | Claude API for data quality checks and documentation (05) |
-| **BI & Analytics** | Power BI · DAX · data modeling · KPI design · statistical analysis · data storytelling | |
-| **Spatial & Domain** | QGIS · ArcGIS · ESG reporting (GRI, ISE B3, DJSI) · environmental monitoring data | Brazilian public environmental sources: INMET, CETESB, IBGE (13) |
-| **Methodologies** | Lean Six Sigma Green Belt | |
+<p>
+<img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" /> <img src="https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=postgresql&logoColor=white" /> <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white" /> <img src="https://img.shields.io/badge/DuckDB-FFF000?style=for-the-badge&logo=duckdb&logoColor=black" /> <img src="https://img.shields.io/badge/ADLS_Gen2-0078D4?style=for-the-badge" /> <img src="https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge" /> <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" /> <img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white" /> <img src="https://img.shields.io/badge/Azure_DevOps-0078D7?style=for-the-badge" /> <img src="https://img.shields.io/badge/QGIS-589632?style=for-the-badge&logo=qgis&logoColor=white" /> <img src="https://img.shields.io/badge/ArcGIS-2C7AC3?style=for-the-badge" />
+</p>
 
-<div align="left">
+**Built hands-on in the portfolio**
 
-<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" />
-<img src="https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=postgresql&logoColor=white" />
-<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" />
-<img src="https://img.shields.io/badge/dbt-FF694B?style=flat-square&logo=dbt&logoColor=white" />
-<img src="https://img.shields.io/badge/DuckDB-FFF000?style=flat-square&logo=duckdb&logoColor=black" />
-<img src="https://img.shields.io/badge/Airflow-017CEE?style=flat-square&logo=apacheairflow&logoColor=white" />
-<img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" />
-<img src="https://img.shields.io/badge/Terraform-844FBA?style=flat-square&logo=terraform&logoColor=white" />
-<img src="https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazonwebservices&logoColor=white" />
-<img src="https://img.shields.io/badge/Azure-0078D4?style=flat-square&logo=microsoftazure&logoColor=white" />
-<img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white" />
-<img src="https://img.shields.io/badge/Power_BI-F2C811?style=flat-square&logo=powerbi&logoColor=black" />
-<img src="https://img.shields.io/badge/QGIS-589632?style=flat-square&logo=qgis&logoColor=white" />
-<img src="https://img.shields.io/badge/Claude-D97757?style=flat-square&logo=anthropic&logoColor=white" />
+<p>
+<img src="https://img.shields.io/badge/dbt-FF694B?style=for-the-badge" /> <img src="https://img.shields.io/badge/Airflow-017CEE?style=for-the-badge&logo=apacheairflow&logoColor=white" /> <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" /> <img src="https://img.shields.io/badge/Terraform-844FBA?style=for-the-badge&logo=terraform&logoColor=white" /> <img src="https://img.shields.io/badge/AWS-232F3E?style=for-the-badge" /> <img src="https://img.shields.io/badge/Great_Expectations-FF6310?style=for-the-badge" /> <img src="https://img.shields.io/badge/pytest-0A9EDC?style=for-the-badge&logo=pytest&logoColor=white" /> <img src="https://img.shields.io/badge/Parquet-50ABF1?style=for-the-badge" /> <img src="https://img.shields.io/badge/Claude_API-D97757?style=for-the-badge&logo=anthropic&logoColor=white" />
+</p>
 
-</div>
+<details>
+<summary><b>Where each one shows up in the projects</b> (click to expand)</summary>
+<br>
+
+| | Project |
+|---|---|
+| dbt + DuckDB modeling | [`01`](https://github.com/amanda-martins-data/pipeline-qualidade-ar) [`02`](https://github.com/amanda-martins-data/orquestracao-airflow-qualidade-ar) [`03`](https://github.com/amanda-martins-data/arquitetura-medallion-qualidade-ar) |
+| Airflow orchestration in Docker | [`02`](https://github.com/amanda-martins-data/orquestracao-airflow-qualidade-ar) |
+| Medallion layers in Parquet | [`03`](https://github.com/amanda-martins-data/arquitetura-medallion-qualidade-ar) |
+| Terraform on AWS: Lambda, RDS PostgreSQL, EventBridge | [`04`](https://github.com/amanda-martins-data/iac-pipeline-cloud-qualidade-ar) |
+| Claude API for quality checks and docs | [`05`](https://github.com/amanda-martins-data/ai-pipeline-qualidade-ar) |
+| Great Expectations + freshness monitoring | [`06`](https://github.com/amanda-martins-data/observabilidade-qualidade-ar) |
+| Architecture Decision Records | [`07`](https://github.com/amanda-martins-data/adr-arquitetura-dados) [`13`](https://github.com/amanda-martins-data/pipeline-multi-fonte-ambiental) |
+| Catalog, lineage and LGPD classification | [`08`](https://github.com/amanda-martins-data/governanca-catalogo-dados) |
+| Dimensional modeling and corporate blueprint | [`07`](https://github.com/amanda-martins-data/adr-arquitetura-dados) [`09`](https://github.com/amanda-martins-data/blueprint-arquitetura-corporativa) |
+| Capacity and cost modeling | [`10`](https://github.com/amanda-martins-data/capacity-planning-qualidade-ar) |
+| RBAC and PII masking | [`11`](https://github.com/amanda-martins-data/seguranca-acesso-dados) |
+| Schema registry and event-driven design | [`12`](https://github.com/amanda-martins-data/streaming-qualidade-ar) |
+| Entity resolution on dirty public data | [`13`](https://github.com/amanda-martins-data/pipeline-multi-fonte-ambiental) |
+| Tested with pytest | [`04`](https://github.com/amanda-martins-data/iac-pipeline-cloud-qualidade-ar) [`05`](https://github.com/amanda-martins-data/ai-pipeline-qualidade-ar) [`06`](https://github.com/amanda-martins-data/observabilidade-qualidade-ar) [`08`](https://github.com/amanda-martins-data/governanca-catalogo-dados) [`10`](https://github.com/amanda-martins-data/capacity-planning-qualidade-ar) [`11`](https://github.com/amanda-martins-data/seguranca-acesso-dados) [`12`](https://github.com/amanda-martins-data/streaming-qualidade-ar) [`13`](https://github.com/amanda-martins-data/pipeline-multi-fonte-ambiental) |
+
+</details>
+
+**Beyond the tools:** data modeling · KPI design · DAX · statistical analysis · data storytelling · ESG reporting (GRI, ISE B3, DJSI) · environmental monitoring data · Lean Six Sigma Green Belt
 
 ---
 
