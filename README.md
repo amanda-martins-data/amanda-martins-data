@@ -41,22 +41,34 @@ Currently pursuing a Post-Graduate degree in Data Architecture at PUC Minas (202
 
 ## Technical Stack
 
-- **Languages & Frameworks:** Python · SQL · JavaScript
-- **CI/CD:** GitHub Actions · Azure DevOps
-- **Data Engineering:** ETL/ELT Pipelines · REST API Integration · ADLS Gen2 · DuckDB · Data Adapters
-- **BI & Analytics:** Power BI · Data Modeling · KPI Design · Statistical Analysis · Data Storytelling · DAX
-- **Spatial & Domain:** QGIS · ArcGIS · ESG Reporting · Environmental Data Monitoring
-- **Methodologies:** GRI · ISE B3 · DJSI · Lean Six Sigma Green Belt
+*Split by where each skill was used. **Professional**: day-to-day in my current and past roles. **Portfolio**: applied hands-on in the projects below (project numbers in parentheses).*
+
+| Area | Professional | Portfolio |
+|---|---|---|
+| **Languages** | Python · SQL · JavaScript | Python · SQL |
+| **Data Engineering** | ETL/ELT · REST API integration · ADLS Gen2 · DuckDB · data adapters | dbt + DuckDB (01-03) · Medallion architecture with Parquet/PyArrow (03) · entity resolution on dirty public data (13) |
+| **Orchestration & Infra** | GitHub Actions · Azure DevOps | Airflow + Docker (02) · Terraform on AWS: Lambda, RDS PostgreSQL, EventBridge, Secrets Manager, IAM (04) |
+| **Data Quality & Testing** | | Great Expectations (06) · pytest test suites (04-06, 08, 10-13) |
+| **Architecture & Governance** | Data governance | ADRs (07, 13) · dimensional modeling decisions (07, 09) · capacity & cost modeling (10) · catalog, lineage & LGPD classification (08) · RBAC & PII masking (11) · schema registry & event-driven design (12) |
+| **AI** | AI-powered interfaces in production | Claude API for data quality checks and documentation (05) |
+| **BI & Analytics** | Power BI · DAX · data modeling · KPI design · statistical analysis · data storytelling | |
+| **Spatial & Domain** | QGIS · ArcGIS · ESG reporting (GRI, ISE B3, DJSI) · environmental monitoring data | Brazilian public environmental sources: INMET, CETESB, IBGE (13) |
+| **Methodologies** | Lean Six Sigma Green Belt | |
 
 <div align="left">
 
 <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" />
 <img src="https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=postgresql&logoColor=white" />
 <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" />
-<img src="https://img.shields.io/badge/Power_BI-F2C811?style=flat-square&logo=powerbi&logoColor=black" />
+<img src="https://img.shields.io/badge/dbt-FF694B?style=flat-square&logo=dbt&logoColor=white" />
+<img src="https://img.shields.io/badge/DuckDB-FFF000?style=flat-square&logo=duckdb&logoColor=black" />
+<img src="https://img.shields.io/badge/Airflow-017CEE?style=flat-square&logo=apacheairflow&logoColor=white" />
+<img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" />
+<img src="https://img.shields.io/badge/Terraform-844FBA?style=flat-square&logo=terraform&logoColor=white" />
+<img src="https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazonwebservices&logoColor=white" />
 <img src="https://img.shields.io/badge/Azure-0078D4?style=flat-square&logo=microsoftazure&logoColor=white" />
 <img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white" />
-<img src="https://img.shields.io/badge/DuckDB-FFF000?style=flat-square&logo=duckdb&logoColor=black" />
+<img src="https://img.shields.io/badge/Power_BI-F2C811?style=flat-square&logo=powerbi&logoColor=black" />
 <img src="https://img.shields.io/badge/QGIS-589632?style=flat-square&logo=qgis&logoColor=white" />
 <img src="https://img.shields.io/badge/Claude-D97757?style=flat-square&logo=anthropic&logoColor=white" />
 
