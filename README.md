@@ -1,190 +1,142 @@
+**Português** | [English](README.en.md)
+
 <div align="center">
 
 # Amanda Martins
 
-`data_engineer.py`
+**Engenharia e Arquitetura de Dados** · 6+ anos em dados · Engenheira Ambiental de formação
+
+Pipelines confiáveis e decisões de arquitetura documentadas.
+Aberta a posições remotas ou híbridas, no Brasil e no exterior.
+
+[LinkedIn](https://www.linkedin.com/in/amandamartinsdts/) · [Email](mailto:amanda_mdantas@outlook.com)
 
 </div>
 
 ```python
 class AmandaMartins:
     def __init__(self):
-        self.experience    = "6+ years in Data"
-        self.current_role  = "Data Analyst -> Data Engineering"
-        self.background     = "Environmental Engineering"
-        self.focus_areas    = ["ETL/ELT Pipelines", "REST API Integration", "Data Architecture"]
-        self.stack          = ["Python", "SQL", "PostgreSQL", "dbt", "DuckDB", "Airflow",
-                               "Terraform/AWS", "ADLS Gen2", "Power BI", "Claude/LLMs"]
-        self.pursuing        = "Post-Graduate in Data Architecture, PUC Minas (2026)"
-
-    def current_work(self):
-        return [
-            "Designing ETL pipelines and REST API integrations",
-            "Building data adapters with Python, SQL, ADLS Gen2, DuckDB",
-            "Delivering dashboards, KPI frameworks and reporting solutions",
-            "Deploying AI-powered interfaces in production",
-        ]
+        self.experience   = "6+ years in Data"
+        self.current_role = "Data Analyst -> Data Engineering"
+        self.background   = "Environmental Engineering"
+        self.focus_areas  = ["Data Pipelines", "Data Architecture", "Data for AI"]
+        self.stack        = ["Python", "SQL", "dbt", "Airflow", "DuckDB", "Terraform", "Azure/AWS"]
+        self.pursuing     = "Post-Graduate in Data Architecture, PUC Minas (2026)"
 ```
 
 ---
 
-## About
+## Em 30 segundos
 
-Data professional with 6+ years of experience translating complex, multi-source datasets into actionable insights and scalable data infrastructure. Currently working as a Data Analyst while progressively taking on Data Engineering responsibilities: designing ETL pipelines, building REST API integrations, and developing data adapters using Python, SQL, ADLS Gen2, and DuckDB.
-
-My background spans Business Intelligence, data governance, and analytical modeling, with a track record of delivering dashboards, KPI frameworks, and reporting solutions across infrastructure, sustainability (ESG), and education sectors.
-
-As a trained Environmental Engineer, I bring domain expertise in spatial data (QGIS/ArcGIS), ESG regulatory frameworks (GRI, ISE B3, DJSI), and environmental monitoring data — adding a strategic, cross-domain layer to my analytics work that purely technical profiles often lack.
-
-Currently pursuing a Post-Graduate degree in Data Architecture at PUC Minas (2026), reinforcing my path toward senior and architect-level data roles.
-
----
-
-## Technical Stack
-
-**At work, every day**
-
-<p>
-<img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" /> <img src="https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=postgresql&logoColor=white" /> <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white" /> <img src="https://img.shields.io/badge/DuckDB-FFF000?style=for-the-badge&logo=duckdb&logoColor=black" /> <img src="https://img.shields.io/badge/ADLS_Gen2-0078D4?style=for-the-badge" /> <img src="https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge" /> <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" /> <img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white" /> <img src="https://img.shields.io/badge/Azure_DevOps-0078D7?style=for-the-badge" /> <img src="https://img.shields.io/badge/QGIS-589632?style=for-the-badge&logo=qgis&logoColor=white" /> <img src="https://img.shields.io/badge/ArcGIS-2C7AC3?style=for-the-badge" />
-</p>
-
-**Built hands-on in the portfolio**
-
-<p>
-<img src="https://img.shields.io/badge/dbt-FF694B?style=for-the-badge" /> <img src="https://img.shields.io/badge/Airflow-017CEE?style=for-the-badge&logo=apacheairflow&logoColor=white" /> <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" /> <img src="https://img.shields.io/badge/Terraform-844FBA?style=for-the-badge&logo=terraform&logoColor=white" /> <img src="https://img.shields.io/badge/AWS-232F3E?style=for-the-badge" /> <img src="https://img.shields.io/badge/Great_Expectations-FF6310?style=for-the-badge" /> <img src="https://img.shields.io/badge/pytest-0A9EDC?style=for-the-badge&logo=pytest&logoColor=white" /> <img src="https://img.shields.io/badge/Parquet-50ABF1?style=for-the-badge" /> <img src="https://img.shields.io/badge/Claude_API-D97757?style=for-the-badge&logo=anthropic&logoColor=white" />
-</p>
-
-<details>
-<summary><b>Where each one shows up in the projects</b> (click to expand)</summary>
-<br>
-
-| | Project |
+| | |
 |---|---|
-| dbt + DuckDB modeling | [`01`](https://github.com/amanda-martins-data/pipeline-qualidade-ar) [`02`](https://github.com/amanda-martins-data/orquestracao-airflow-qualidade-ar) [`03`](https://github.com/amanda-martins-data/arquitetura-medallion-qualidade-ar) |
-| Airflow orchestration in Docker | [`02`](https://github.com/amanda-martins-data/orquestracao-airflow-qualidade-ar) |
-| Medallion layers in Parquet | [`03`](https://github.com/amanda-martins-data/arquitetura-medallion-qualidade-ar) |
-| Terraform on AWS: Lambda, RDS PostgreSQL, EventBridge | [`04`](https://github.com/amanda-martins-data/iac-pipeline-cloud-qualidade-ar) |
-| Claude API for quality checks and docs | [`05`](https://github.com/amanda-martins-data/ai-pipeline-qualidade-ar) |
-| Great Expectations + freshness monitoring | [`06`](https://github.com/amanda-martins-data/observabilidade-qualidade-ar) |
-| Architecture Decision Records | [`07`](https://github.com/amanda-martins-data/adr-arquitetura-dados) [`13`](https://github.com/amanda-martins-data/pipeline-multi-fonte-ambiental) |
-| Catalog, lineage and LGPD classification | [`08`](https://github.com/amanda-martins-data/governanca-catalogo-dados) |
-| Dimensional modeling and corporate blueprint | [`07`](https://github.com/amanda-martins-data/adr-arquitetura-dados) [`09`](https://github.com/amanda-martins-data/blueprint-arquitetura-corporativa) |
-| Capacity and cost modeling | [`10`](https://github.com/amanda-martins-data/capacity-planning-qualidade-ar) |
-| RBAC and PII masking | [`11`](https://github.com/amanda-martins-data/seguranca-acesso-dados) |
-| Schema registry and event-driven design | [`12`](https://github.com/amanda-martins-data/streaming-qualidade-ar) |
-| Entity resolution on dirty public data | [`13`](https://github.com/amanda-martins-data/pipeline-multi-fonte-ambiental) |
-| Tested with pytest | [`04`](https://github.com/amanda-martins-data/iac-pipeline-cloud-qualidade-ar) [`05`](https://github.com/amanda-martins-data/ai-pipeline-qualidade-ar) [`06`](https://github.com/amanda-martins-data/observabilidade-qualidade-ar) [`08`](https://github.com/amanda-martins-data/governanca-catalogo-dados) [`10`](https://github.com/amanda-martins-data/capacity-planning-qualidade-ar) [`11`](https://github.com/amanda-martins-data/seguranca-acesso-dados) [`12`](https://github.com/amanda-martins-data/streaming-qualidade-ar) [`13`](https://github.com/amanda-martins-data/pipeline-multi-fonte-ambiental) |
-
-</details>
-
-**Beyond the tools:** data modeling · KPI design · DAX · statistical analysis · data storytelling · ESG reporting (GRI, ISE B3, DJSI) · environmental monitoring data · Lean Six Sigma Green Belt
+| **O que eu faço** | Projeto e mantenho pipelines ELT, camadas de dados (Bronze/Silver/Gold) e a governança em volta delas |
+| **Diferencial** | Registro em cada projeto as decisões que tomei, as limitações e o gatilho para revisá-las. Os erros que encontrei pelo caminho também ficam documentados |
+| **Projetos** | 13 publicados. No mais recente trabalhei com dados públicos reais: 594 estações do INMET, 5.570 municípios do IBGE e leituras da CETESB |
+| **Procuro** | Engenheira de Dados, Analytics Engineer ou Analista de Dados Sênior |
 
 ---
 
-## Open To
+## Três pilares
 
-**Senior Data Analyst · Data Engineer · Analytics Engineer**
+**1. Arquitetura com decisões documentadas.** Escolho a solução proporcional ao estágio do problema e registro quando ela deve mudar. Projetos [07](https://github.com/amanda-martins-data/adr-arquitetura-dados), [09](https://github.com/amanda-martins-data/blueprint-arquitetura-corporativa), [10](https://github.com/amanda-martins-data/capacity-planning-qualidade-ar).
 
-Remote · Hybrid — National & International
+**2. Pipelines confiáveis sobre fontes heterogêneas.** Trabalho com orquestração, idempotência, testes de dados e resolução de entidades em dado sujo. Projetos [01](https://github.com/amanda-martins-data/pipeline-qualidade-ar), [02](https://github.com/amanda-martins-data/orquestracao-airflow-qualidade-ar), [03](https://github.com/amanda-martins-data/arquitetura-medallion-qualidade-ar), [13](https://github.com/amanda-martins-data/pipeline-multi-fonte-ambiental).
 
----
-
-## Projects
-
-*Projects in progress — each documented with context, architecture and technical decisions.*
-
-### 01 · ETL/ELT Pipeline for Environmental Data
-`Python` `dbt` `PostgreSQL` `Power BI`
-Ingestion and transformation of public environmental data (air quality / climate / water resources), with dimensional modeling and analytical dashboard.
-📁 [Repository](https://github.com/amanda-martins-data/pipeline-qualidade-ar)
+**3. Dados para IA.** Apliquei IA à checagem de qualidade de dados no [Projeto 05](https://github.com/amanda-martins-data/ai-pipeline-qualidade-ar). Estou construindo um pipeline de RAG e um servidor MCP sobre a camada Gold (ver "Em construção").
 
 ---
 
-### 02 · Pipeline Orchestration with Airflow
-`Airflow` `Python` `Docker`
-Production-grade pipeline orchestration: scheduling, retries, failure alerts and task dependencies.
-📁 [Repository](https://github.com/amanda-martins-data/orquestracao-airflow-qualidade-ar)
+## Stack
+
+<div align="left">
+
+**Linguagens e transformação**
+<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" />
+<img src="https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=postgresql&logoColor=white" />
+<img src="https://img.shields.io/badge/dbt-FF694B?style=flat-square&logo=dbt&logoColor=white" />
+<img src="https://img.shields.io/badge/DuckDB-FFF000?style=flat-square&logo=duckdb&logoColor=black" />
+
+**Orquestração e qualidade**
+<img src="https://img.shields.io/badge/Airflow-017CEE?style=flat-square&logo=apacheairflow&logoColor=white" />
+<img src="https://img.shields.io/badge/Great_Expectations-FF6310?style=flat-square" />
+<img src="https://img.shields.io/badge/pytest-0A9EDC?style=flat-square&logo=pytest&logoColor=white" />
+
+**Infraestrutura**
+<img src="https://img.shields.io/badge/Terraform-7B42BC?style=flat-square&logo=terraform&logoColor=white" />
+<img src="https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazonaws&logoColor=white" />
+<img src="https://img.shields.io/badge/Azure_ADLS_Gen2-0078D4?style=flat-square&logo=microsoftazure&logoColor=white" />
+<img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" />
+
+**BI e IA**
+<img src="https://img.shields.io/badge/Power_BI-F2C811?style=flat-square&logo=powerbi&logoColor=black" />
+<img src="https://img.shields.io/badge/Claude-D97757?style=flat-square&logo=anthropic&logoColor=white" />
+
+</div>
 
 ---
 
-### 03 · Medallion Architecture (Bronze/Silver/Gold)
-`Data Lake` `Parquet` `ADR`
-Layered data lake with documented architectural decisions (ADRs) on partitioning, file formats and schema evolution.
-📁 [Repository](https://github.com/amanda-martins-data/arquitetura-medallion-qualidade-ar)
+## Projetos
+
+### Pipelines e camadas de dados
+
+| # | Projeto | O que entrega | Stack |
+|---|---|---|---|
+| 01 | [Pipeline ELT ambiental](https://github.com/amanda-martins-data/pipeline-qualidade-ar) | Ingestão do OpenAQ, modelagem dimensional e testes declarativos | `Python` `dbt` `DuckDB` |
+| 02 | [Orquestração com Airflow](https://github.com/amanda-martins-data/orquestracao-airflow-qualidade-ar) | Agendamento, retries com backoff, alertas e ramificação sem redeploy | `Airflow` `Docker` |
+| 03 | [Arquitetura Medallion](https://github.com/amanda-martins-data/arquitetura-medallion-qualidade-ar) | Bronze/Silver/Gold em Parquet, idempotência por reescrita de partição | `Parquet` `dbt` |
+| 13 | [Pipeline multi-fonte](https://github.com/amanda-martins-data/pipeline-multi-fonte-ambiental) | INMET + IBGE + CETESB unidos por município, com resolução em camadas | `Python` `pytest` |
+
+### Arquitetura, governança e segurança
+
+| # | Projeto | O que entrega | Stack |
+|---|---|---|---|
+| 07 | [ADRs de arquitetura](https://github.com/amanda-martins-data/adr-arquitetura-dados) | Registro de decisões com contexto, alternativas e gatilho de revisão | `ADR` |
+| 08 | [Governança e catálogo](https://github.com/amanda-martins-data/governanca-catalogo-dados) | Papéis, RACI, retenção e classificação com mapeamento à LGPD; catálogo gerado de YAML, com linhagem verificada | `Python` `YAML` |
+| 09 | [Blueprint corporativo](https://github.com/amanda-martins-data/blueprint-arquitetura-corporativa) | Modelo conceitual, lógico e físico, fluxo de dados e requisitos não funcionais de uma organização fictícia, sem código | `Arquitetura` |
+| 10 | [Capacity planning](https://github.com/amanda-martins-data/capacity-planning-qualidade-ar) | Onde cada componente da infraestrutura do Projeto 04 quebra a 10x e 100x, com modelo de custo testado e plano de re-arquitetura | `Python` |
+| 11 | [Segurança e acesso](https://github.com/amanda-martins-data/seguranca-acesso-dados) | RBAC testado sobre o catálogo do Projeto 08, mascaramento de PII e trilha de auditoria | `Python` |
+
+### Qualidade, IA e infraestrutura
+
+| # | Projeto | O que entrega | Stack |
+|---|---|---|---|
+| 04 | [IaC para pipeline cloud](https://github.com/amanda-martins-data/iac-pipeline-cloud-qualidade-ar) | Lambda, S3 e RDS versionados como código | `Terraform` `AWS` |
+| 05 | [Pipeline com IA integrada](https://github.com/amanda-martins-data/ai-pipeline-qualidade-ar) | Agente de IA para checagem de qualidade e documentação | `Claude` `LLMs` |
+| 06 | [Observabilidade e qualidade](https://github.com/amanda-martins-data/observabilidade-qualidade-ar) | Testes de dados e monitoramento de qualidade | `Great Expectations` |
+| 12 | [Streaming orientado a eventos](https://github.com/amanda-martins-data/streaming-qualidade-ar) | Schema registry e event bus em memória com garantias testadas, e modelo de latência batch vs streaming | `Python` |
 
 ---
 
-### 04 · Infrastructure as Code for a Cloud Pipeline
-`Terraform` `AWS/GCP` `IaC`
-Data pipeline provisioned via Terraform: storage, serverless function and managed database versioned as code.
-📁 [Repository](https://github.com/amanda-martins-data/iac-pipeline-cloud-qualidade-ar)
+## Decisões técnicas em destaque
+
+Cinco decisões que tomei, cada uma com o trade-off e o motivo registrados no repositório.
+
+- **Parquet com dbt lendo e escrevendo os arquivos direto (Projeto 03).** O mesmo arquivo serve a DuckDB, Spark ou pandas sem reprocessar. Abri mão de índices e do controle de acesso nativo de um warehouse, e deixei o gatilho de revisão registrado.
+- **Idempotência por reescrita de partição (Projeto 03).** Na Silver eu apago e reescrevo cada partição afetada, então rodar a transformação duas vezes dá o mesmo resultado. Esse método fica caro em volume alto, e o README do projeto registra isso.
+- **Resolução de entidades em camadas (Projeto 13).** Descobri que 9,4% dos municípios não são alcançáveis só pelo nome. Resolvo da evidência mais forte para a mais fraca, e o que continua ambíguo vai para quarentena: 100% de resolução com nome e UF, 90,6% só com nome.
+- **Streaming sem cluster (Projeto 12).** Na ADR 0010 decidi permanecer em batch. Para estar pronta quando um dos gatilhos aparecer, implementei e testei as garantias que importariam (particionamento, entrega at-least-once e compatibilidade de schema), sem provisionar Kafka.
+- **Uma suposição errada minha (Projeto 11).** Um teste apontou que eu tinha entendido mal o papel `data_consumer` e os datasets internos. A falha estava no teste, e eu corrigi e documentei a semântica correta.
 
 ---
 
-### 05 · AI-Integrated Pipeline
-`Claude` `LLMs` `Data Quality`
-AI agent applied to data quality checks and automatic pipeline documentation generation.
-📁 [Repository](https://github.com/amanda-martins-data/ai-pipeline-qualidade-ar)
+## Como ler meus repositórios
+
+Em cada repositório descrevo o problema, a arquitetura e as limitações, e registro as decisões e as lacunas conhecidas. Há testes automatizados e instruções para rodar do zero.
 
 ---
 
-### 06 · Data Observability & Quality
-`dbt tests` `Great Expectations` `Monitoring`
-Data tests and monitoring dashboard for quality and freshness across the pipelines above.
-📁 [Repository](https://github.com/amanda-martins-data/observabilidade-qualidade-ar)
+## Em construção
+
+- **Integração contínua:** testes rodando automaticamente a cada alteração em todos os repositórios, com selo de status no README.
+- **Dados para IA:** pipeline de RAG tratado como engenharia de dados (ingestão, chunking, índice com atualização incremental, qualidade da recuperação) e servidor MCP sobre a camada Gold, com o controle de acesso do Projeto 11.
+- **Lakehouse em escala:** versão do Projeto 03 com Spark e formato de tabela Delta ou Iceberg, tratando schema evolution e compactação.
+- **Azure e warehouse em nuvem:** infraestrutura do Projeto 04 em Azure e o mesmo modelo dbt rodando em BigQuery ou Snowflake.
+- **Contratos de dados:** estender o contrato do catálogo (Projeto 08) para validar as fontes do Projeto 13.
 
 ---
 
-### 07 · Architecture Decision Records
-`ADR` `System Design` `Data Governance`
-Formal ADRs documenting the architecture trade-offs behind the pipelines above, plus prospective decisions on modeling, schema evolution and streaming.
-📁 [Repository](https://github.com/amanda-martins-data/adr-arquitetura-dados)
-
----
-
-### 08 · Data Governance & Catalog
-`Governance` `Data Catalog` `LGPD`
-Governance framework (roles, RACI, retention policy, LGPD-mapped classification) plus a working data catalog that validates YAML dataset definitions and renders lineage across the pipelines above.
-📁 [Repository](https://github.com/amanda-martins-data/governanca-catalogo-dados)
-
----
-
-### 09 · Corporate Data Architecture Blueprint
-`System Design` `Star Schema` `Multi-tenant`
-Full architecture document (conceptual, logical, physical models, NFRs, DR) for a fictional multi-tenant environmental monitoring org - no code, the kind of deliverable produced before implementation starts.
-📁 [Repository](https://github.com/amanda-martins-data/blueprint-arquitetura-corporativa)
-
----
-
-### 10 · Capacity Planning & Cost Model
-`Scalability` `AWS Cost` `Capacity Planning`
-Tested cost and capacity model for the real Project 04 infrastructure - exact breakpoint (Lambda timeout at 45.2x baseline volume) computed algebraically, not guessed, with a prioritized re-architecture plan.
-📁 [Repository](https://github.com/amanda-martins-data/capacity-planning-qualidade-ar)
-
----
-
-### 11 · Data Security & Access Architecture
-`RBAC` `PII Masking` `Audit Trail`
-Tested RBAC engine applying the Project 08 catalog's roles and sensitivity levels - PII masking as a second, independent defense layer plus an append-only audit log.
-📁 [Repository](https://github.com/amanda-martins-data/seguranca-acesso-dados)
-
----
-
-### 12 · Event-Driven Architecture (Streaming)
-`Kafka-style` `Schema Registry` `Event-Driven`
-Tested schema registry (backward/forward/full compatibility) and in-memory event bus (partitioning, ordering, at-least-once delivery), comparing batch vs streaming latency on the real Project 10 baseline.
-📁 [Repository](https://github.com/amanda-martins-data/streaming-qualidade-ar)
-
----
-
-### 13 · Multi-Source Environmental Pipeline
-`Entity Resolution` `Dirty Data` `Data Integration`
-Real, dirty public data from three sources (INMET weather, CETESB air quality via OpenAQ, IBGE) joined on the municipality dimension - 5M+ rows of latin-1 CSVs, and a tested layered resolver built on the finding that 9.4% of Brazilian municipalities cannot be identified by name alone.
-[Repository](https://github.com/amanda-martins-data/pipeline-multi-fonte-ambiental)
-
----
-
-## Contact
+## Contato
 
 <div align="left">
 
