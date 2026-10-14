@@ -124,13 +124,14 @@ Five decisions I made, each with its trade-off and rationale recorded in the rep
 
 ## How to read my repositories
 
-In each repository I describe the problem, the architecture and the limitations, and I record the decisions and the known gaps. There are automated tests and instructions to run everything from scratch.
+In each repository I describe the problem, the architecture and the limitations, and I record the decisions and the known gaps. There are instructions to run everything from scratch.
+
+Continuous integration runs on GitHub Actions, with a status badge in the README. Eight repositories run their tests on every change (04, 05, 06, 08, 10, 11, 12 and 13), and three check the Python syntax and run `dbt parse` (01, 02 and 03). Projects 07 and 09 are documentation only and have no CI.
 
 ---
 
 ## In progress
 
-- **Continuous integration:** tests running automatically on every change in all repositories, with a status badge in the README.
 - **Data for AI:** a RAG pipeline treated as data engineering (ingestion, chunking, an index with incremental refresh, retrieval quality) and an MCP server on top of the Gold layer, using the access control from Project 11.
 - **Lakehouse at scale:** a version of Project 03 with Spark and a Delta or Iceberg table format, covering schema evolution and compaction.
 - **Azure and a cloud warehouse:** the Project 04 infrastructure on Azure and the same dbt model running on BigQuery or Snowflake.
