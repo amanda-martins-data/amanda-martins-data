@@ -122,13 +122,14 @@ Cinco decisões que tomei, cada uma com o trade-off e o motivo registrados no re
 
 ## Como ler meus repositórios
 
-Em cada repositório descrevo o problema, a arquitetura e as limitações, e registro as decisões e as lacunas conhecidas. Há testes automatizados e instruções para rodar do zero.
+Em cada repositório descrevo o problema, a arquitetura e as limitações, e registro as decisões e as lacunas conhecidas. Há instruções para rodar do zero.
+
+A integração contínua roda no GitHub Actions, com selo de status no README. Oito repositórios executam os testes a cada alteração (04, 05, 06, 08, 10, 11, 12 e 13), e três verificam a sintaxe do Python e rodam o `dbt parse` (01, 02 e 03). Os Projetos 07 e 09 são só documentação e ficam sem CI.
 
 ---
 
 ## Em construção
 
-- **Integração contínua:** testes rodando automaticamente a cada alteração em todos os repositórios, com selo de status no README.
 - **Dados para IA:** pipeline de RAG tratado como engenharia de dados (ingestão, chunking, índice com atualização incremental, qualidade da recuperação) e servidor MCP sobre a camada Gold, com o controle de acesso do Projeto 11.
 - **Lakehouse em escala:** versão do Projeto 03 com Spark e formato de tabela Delta ou Iceberg, tratando schema evolution e compactação.
 - **Azure e warehouse em nuvem:** infraestrutura do Projeto 04 em Azure e o mesmo modelo dbt rodando em BigQuery ou Snowflake.
