@@ -4,7 +4,7 @@
 
 # Amanda Martins
 
-**Engenharia e Arquitetura de Dados** · 6+ anos em dados · Engenheira Ambiental de formação
+**Engenharia e Arquitetura de Dados** · 6+ anos em dados · Pós-graduada em Arquitetura de Dados (PUC Minas)
 
 Pipelines confiáveis e decisões de arquitetura documentadas.
 Aberta a posições remotas ou híbridas, no Brasil e no exterior.
@@ -17,11 +17,10 @@ Aberta a posições remotas ou híbridas, no Brasil e no exterior.
 class AmandaMartins:
     def __init__(self):
         self.experience   = "6+ years in Data"
-        self.current_role = "Data Analyst -> Data Engineering"
-        self.background   = "Environmental Engineering"
+        self.role         = "Data Engineering & Architecture"
         self.focus_areas  = ["Data Pipelines", "Data Architecture", "Data for AI"]
         self.stack        = ["Python", "SQL", "dbt", "Airflow", "DuckDB", "Terraform", "Azure/AWS"]
-        self.pursuing     = "Post-Graduate in Data Architecture, PUC Minas (2026)"
+        self.education    = "Post-Graduate in Data Architecture, PUC Minas"
 ```
 
 ---
@@ -33,7 +32,7 @@ class AmandaMartins:
 | **O que eu faço** | Projeto e mantenho pipelines ELT, camadas de dados (Bronze/Silver/Gold) e a governança em volta delas |
 | **Diferencial** | Registro em cada projeto as decisões que tomei, as limitações e o gatilho para revisá-las. Os erros que encontrei pelo caminho também ficam documentados |
 | **Projetos** | 13 publicados. No mais recente trabalhei com dados públicos reais: 594 estações do INMET, 5.570 municípios do IBGE e leituras da CETESB |
-| **Procuro** | Engenheira de Dados, Analytics Engineer ou Analista de Dados Sênior |
+| **Procuro** | Engenheira de Dados (Pleno) ou Analytics Engineer |
 
 ---
 
@@ -41,7 +40,7 @@ class AmandaMartins:
 
 **1. Arquitetura com decisões documentadas.** Escolho a solução proporcional ao estágio do problema e registro quando ela deve mudar. Projetos [07](https://github.com/amanda-martins-data/adr-arquitetura-dados), [09](https://github.com/amanda-martins-data/blueprint-arquitetura-corporativa), [10](https://github.com/amanda-martins-data/capacity-planning-qualidade-ar).
 
-**2. Pipelines confiáveis sobre fontes heterogêneas.** Trabalho com orquestração, idempotência, testes de dados e resolução de entidades em dado sujo. Projetos [01](https://github.com/amanda-martins-data/pipeline-qualidade-ar), [02](https://github.com/amanda-martins-data/orquestracao-airflow-qualidade-ar), [03](https://github.com/amanda-martins-data/arquitetura-medallion-qualidade-ar), [13](https://github.com/amanda-martins-data/pipeline-multi-fonte-ambiental).
+**2. Pipelines confiáveis sobre fontes heterogêneas.** Trabalho com orquestração, idempotência, testes de dados e resolução de entidades em dado sujo. Projetos [01](https://github.com/amanda-martins-data/pipeline-qualidade-ar), [02](https://github.com/amanda-martins-data/orquestracao-airflow-qualidade-ar), [03](https://github.com/amanda-martins-data/arquitetura-medallion-qualidade-ar), [13](https://github.com/amanda-martins-data/pipeline-multi-fonte-dados-publicos).
 
 **3. Dados para IA.** Apliquei IA à checagem de qualidade de dados no [Projeto 05](https://github.com/amanda-martins-data/ai-pipeline-qualidade-ar). Estou construindo um pipeline de RAG e um servidor MCP sobre a camada Gold (ver "Em construção").
 
@@ -82,10 +81,10 @@ class AmandaMartins:
 
 | # | Projeto | O que entrega | Stack |
 |---|---|---|---|
-| 01 | [Pipeline ELT ambiental](https://github.com/amanda-martins-data/pipeline-qualidade-ar) | Ingestão do OpenAQ, modelagem dimensional e testes declarativos | `Python` `dbt` `DuckDB` |
+| 01 | [Pipeline ELT com dbt](https://github.com/amanda-martins-data/pipeline-qualidade-ar) | Ingestão do OpenAQ, modelagem dimensional e testes declarativos | `Python` `dbt` `DuckDB` |
 | 02 | [Orquestração com Airflow](https://github.com/amanda-martins-data/orquestracao-airflow-qualidade-ar) | Agendamento, retries com backoff, alertas e ramificação sem redeploy | `Airflow` `Docker` |
 | 03 | [Arquitetura Medallion](https://github.com/amanda-martins-data/arquitetura-medallion-qualidade-ar) | Bronze/Silver/Gold em Parquet, idempotência por reescrita de partição | `Parquet` `dbt` |
-| 13 | [Pipeline multi-fonte](https://github.com/amanda-martins-data/pipeline-multi-fonte-ambiental) | INMET + IBGE + CETESB unidos por município, com resolução em camadas | `Python` `pytest` |
+| 13 | [Pipeline multi-fonte](https://github.com/amanda-martins-data/pipeline-multi-fonte-dados-publicos) | INMET + IBGE + CETESB unidos por município, com resolução em camadas | `Python` `pytest` |
 
 ### Arquitetura, governança e segurança
 
