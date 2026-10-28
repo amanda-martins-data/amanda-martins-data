@@ -1,17 +1,11 @@
 [Português](README.md) | **English**
 
-<h3 align="center">DATA ENGINEERING AND ARCHITECTURE</h3>
-
-<h1 align="center">Amanda Martins</h1>
-
-<p align="center"><b>6+ years in data · Post-Graduate in Data Architecture (PUC Minas)</b><br>Reliable pipelines and documented architecture decisions.<br>Open to remote or hybrid roles, in Brazil and abroad.</p>
+<p align="center"><img src="assets/hero-en.svg" width="860" alt="Amanda Martins, Data Engineering and Architecture" /></p>
 
 <p align="center">
 <a href="https://www.linkedin.com/in/amandamartinsdts/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" /></a>
 <a href="mailto:amanda_mdantas@outlook.com"><img src="https://img.shields.io/badge/Email-D14836?style=flat-square&logo=gmail&logoColor=white" /></a>
 </p>
-
-![Developer profile](https://www.gitskins.com/api/section/hero?username=amanda-martins-data&theme=retro)
 
 ## 01 / In 30 seconds
 
@@ -44,7 +38,7 @@ class AmandaMartins:
 
 ## 03 / Project district
 
-![Public projects](https://www.gitskins.com/api/section/projects?username=amanda-martins-data&theme=retro)
+<p align="center"><img src="assets/projects-en.svg" width="860" alt="Featured projects" /></p>
 
 The documentation inside each repository is currently in Portuguese.
 
@@ -78,36 +72,9 @@ The documentation inside each repository is currently in Portuguese.
 
 <h3 align="center"><a href="https://github.com/amanda-martins-data?tab=repositories">Explore the repositories ↗</a></h3>
 
-## 04 / Control room
+## 04 / Stack
 
-**Languages and transformation**
-<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" />
-<img src="https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=postgresql&logoColor=white" />
-<img src="https://img.shields.io/badge/dbt-FF694B?style=flat-square&logo=dbt&logoColor=white" />
-<img src="https://img.shields.io/badge/DuckDB-FFF000?style=flat-square&logo=duckdb&logoColor=black" />
-
-**Orchestration and quality**
-<img src="https://img.shields.io/badge/Airflow-017CEE?style=flat-square&logo=apacheairflow&logoColor=white" />
-<img src="https://img.shields.io/badge/Great_Expectations-FF6310?style=flat-square" />
-<img src="https://img.shields.io/badge/pytest-0A9EDC?style=flat-square&logo=pytest&logoColor=white" />
-
-**Infrastructure**
-<img src="https://img.shields.io/badge/Terraform-7B42BC?style=flat-square&logo=terraform&logoColor=white" />
-<img src="https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazonaws&logoColor=white" />
-<img src="https://img.shields.io/badge/Azure_ADLS_Gen2-0078D4?style=flat-square&logo=microsoftazure&logoColor=white" />
-<img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" />
-
-**BI and AI**
-<img src="https://img.shields.io/badge/Power_BI-F2C811?style=flat-square&logo=powerbi&logoColor=black" />
-<img src="https://img.shields.io/badge/Claude-D97757?style=flat-square&logo=anthropic&logoColor=white" />
-
-<table>
-<tr><th width="50%"><h3>PUBLIC SIGNALS</h3></th><th width="50%"><h3>TOOLS OF THE TRADE</h3></th></tr>
-<tr>
-<td><img src="https://www.gitskins.com/api/section/stats?username=amanda-martins-data&theme=retro" alt="Public GitHub statistics" width="410" /></td>
-<td><img src="https://www.gitskins.com/api/section/stack?username=amanda-martins-data&theme=retro" alt="Languages from public repositories" width="410" /></td>
-</tr>
-</table>
+<p align="center"><img src="assets/stack-en.svg" width="860" alt="Portfolio stack" /></p>
 
 ## 05 / Highlighted technical decisions
 
@@ -132,16 +99,6 @@ Continuous integration runs on GitHub Actions, with a status badge in the README
 - **Azure and a cloud warehouse:** the Project 04 infrastructure on Azure and the same dbt model running on BigQuery or Snowflake.
 - **Data contracts:** extending the catalog contract (Project 08) to validate the sources in Project 13.
 
-<details>
-<summary><h3>08 / Activity archive</h3></summary>
-
-![Contribution city](https://www.gitskins.com/api/section/city?username=amanda-martins-data&theme=retro)
-
-### The daily building blocks
-
-![Contribution calendar](https://www.gitskins.com/api/section/heatmap?username=amanda-martins-data&theme=retro)
-
-</details>
 
 ---
 
@@ -152,4 +109,4 @@ Continuous integration runs on GitHub Actions, with a status badge in the README
 <a href="mailto:amanda_mdantas@outlook.com"><img src="https://img.shields.io/badge/Email-D14836?style=flat-square&logo=gmail&logoColor=white" /></a>
 </p>
 
-<p align="center"><sub>Amanda Martins · <a href="https://www.gitskins.com/readme-generator?template=community-builder-s-workbench-city-edition-9udn">Builder’s Workbench — City Edition</a> template by <a href="https://www.gitskins.com/creators/pengusto">@pengusto</a> · generated with <a href="https://www.gitskins.com/readme-generator">GitSkins</a></sub></p>
+<p align="center"><sub>Amanda Martins · layout inspired by the <a href="https://www.gitskins.com/readme-generator?template=community-builder-s-workbench-city-edition-9udn">Builder’s Workbench — City Edition</a> template by <a href="https://www.gitskins.com/creators/pengusto">@pengusto</a> on GitSkins</sub></p>
