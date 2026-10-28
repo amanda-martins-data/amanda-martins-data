@@ -1,17 +1,19 @@
 **Português** | [English](README.en.md)
 
-<div align="center">
+<h3 align="center">ENGENHARIA E ARQUITETURA DE DADOS</h3>
 
-# Amanda Martins
+<h1 align="center">Amanda Martins</h1>
 
-**Engenharia e Arquitetura de Dados** · 6+ anos em dados · Pós-graduada em Arquitetura de Dados (PUC Minas)
+<p align="center"><b>6+ anos em dados · Pós-graduada em Arquitetura de Dados (PUC Minas)</b><br>Pipelines confiáveis e decisões de arquitetura documentadas.<br>Aberta a posições remotas ou híbridas, no Brasil e no exterior.</p>
 
-Pipelines confiáveis e decisões de arquitetura documentadas.
-Aberta a posições remotas ou híbridas, no Brasil e no exterior.
+<p align="center">
+<a href="https://www.linkedin.com/in/amandamartinsdts/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" /></a>
+<a href="mailto:amanda_mdantas@outlook.com"><img src="https://img.shields.io/badge/Email-D14836?style=flat-square&logo=gmail&logoColor=white" /></a>
+</p>
 
-[LinkedIn](https://www.linkedin.com/in/amandamartinsdts/) · [Email](mailto:amanda_mdantas@outlook.com)
+![Perfil](https://www.gitskins.com/api/section/hero?username=amanda-martins-data&theme=retro)
 
-</div>
+## 01 / Em 30 segundos
 
 ```python
 class AmandaMartins:
@@ -23,10 +25,6 @@ class AmandaMartins:
         self.education    = "Post-Graduate in Data Architecture, PUC Minas"
 ```
 
----
-
-## Em 30 segundos
-
 | | |
 |---|---|
 | **O que eu faço** | Projeto e mantenho pipelines ELT, camadas de dados (Bronze/Silver/Gold) e a governança em volta delas |
@@ -34,48 +32,19 @@ class AmandaMartins:
 | **Projetos** | 13 publicados. No mais recente trabalhei com dados públicos reais: 594 estações do INMET, 5.570 municípios do IBGE e leituras da CETESB |
 | **Procuro** | Engenheira de Dados (Pleno) ou Analytics Engineer |
 
----
+## 02 / Três pilares
 
-## Três pilares
+<table>
+<tr>
+<td valign="top" width="33%"><h3>🏛 Arquitetura com decisões documentadas</h3>Solução proporcional ao estágio do problema, com o gatilho para mudar registrado.<br><br><sub>Projetos <a href="https://github.com/amanda-martins-data/adr-arquitetura-dados">07</a> · <a href="https://github.com/amanda-martins-data/blueprint-arquitetura-corporativa">09</a> · <a href="https://github.com/amanda-martins-data/capacity-planning-qualidade-ar">10</a></sub></td>
+<td valign="top" width="33%"><h3>🧰 Pipelines confiáveis sobre fontes heterogêneas</h3>Orquestração, idempotência, testes de dados e resolução de entidades em dado sujo.<br><br><sub>Projetos <a href="https://github.com/amanda-martins-data/pipeline-qualidade-ar">01</a> · <a href="https://github.com/amanda-martins-data/orquestracao-airflow-qualidade-ar">02</a> · <a href="https://github.com/amanda-martins-data/arquitetura-medallion-qualidade-ar">03</a> · <a href="https://github.com/amanda-martins-data/pipeline-multi-fonte-dados-publicos">13</a></sub></td>
+<td valign="top" width="33%"><h3>🚀 Dados para IA</h3>IA aplicada à checagem de qualidade de dados; RAG e servidor MCP sobre a camada Gold em construção.<br><br><sub>Projeto <a href="https://github.com/amanda-martins-data/ai-pipeline-qualidade-ar">05</a></sub></td>
+</tr>
+</table>
 
-**1. Arquitetura com decisões documentadas.** Escolho a solução proporcional ao estágio do problema e registro quando ela deve mudar. Projetos [07](https://github.com/amanda-martins-data/adr-arquitetura-dados), [09](https://github.com/amanda-martins-data/blueprint-arquitetura-corporativa), [10](https://github.com/amanda-martins-data/capacity-planning-qualidade-ar).
+## 03 / Distrito de projetos
 
-**2. Pipelines confiáveis sobre fontes heterogêneas.** Trabalho com orquestração, idempotência, testes de dados e resolução de entidades em dado sujo. Projetos [01](https://github.com/amanda-martins-data/pipeline-qualidade-ar), [02](https://github.com/amanda-martins-data/orquestracao-airflow-qualidade-ar), [03](https://github.com/amanda-martins-data/arquitetura-medallion-qualidade-ar), [13](https://github.com/amanda-martins-data/pipeline-multi-fonte-dados-publicos).
-
-**3. Dados para IA.** Apliquei IA à checagem de qualidade de dados no [Projeto 05](https://github.com/amanda-martins-data/ai-pipeline-qualidade-ar). Estou construindo um pipeline de RAG e um servidor MCP sobre a camada Gold (ver "Em construção").
-
----
-
-## Stack
-
-<div align="left">
-
-**Linguagens e transformação**
-<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" />
-<img src="https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=postgresql&logoColor=white" />
-<img src="https://img.shields.io/badge/dbt-FF694B?style=flat-square&logo=dbt&logoColor=white" />
-<img src="https://img.shields.io/badge/DuckDB-FFF000?style=flat-square&logo=duckdb&logoColor=black" />
-
-**Orquestração e qualidade**
-<img src="https://img.shields.io/badge/Airflow-017CEE?style=flat-square&logo=apacheairflow&logoColor=white" />
-<img src="https://img.shields.io/badge/Great_Expectations-FF6310?style=flat-square" />
-<img src="https://img.shields.io/badge/pytest-0A9EDC?style=flat-square&logo=pytest&logoColor=white" />
-
-**Infraestrutura**
-<img src="https://img.shields.io/badge/Terraform-7B42BC?style=flat-square&logo=terraform&logoColor=white" />
-<img src="https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazonaws&logoColor=white" />
-<img src="https://img.shields.io/badge/Azure_ADLS_Gen2-0078D4?style=flat-square&logo=microsoftazure&logoColor=white" />
-<img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" />
-
-**BI e IA**
-<img src="https://img.shields.io/badge/Power_BI-F2C811?style=flat-square&logo=powerbi&logoColor=black" />
-<img src="https://img.shields.io/badge/Claude-D97757?style=flat-square&logo=anthropic&logoColor=white" />
-
-</div>
-
----
-
-## Projetos
+![Projetos públicos](https://www.gitskins.com/api/section/projects?username=amanda-martins-data&theme=retro)
 
 ### Pipelines e camadas de dados
 
@@ -105,9 +74,40 @@ class AmandaMartins:
 | 06 | [Observabilidade e qualidade](https://github.com/amanda-martins-data/observabilidade-qualidade-ar) | Testes de dados e monitoramento de qualidade | `Great Expectations` |
 | 12 | [Streaming orientado a eventos](https://github.com/amanda-martins-data/streaming-qualidade-ar) | Schema registry e event bus em memória com garantias testadas, e modelo de latência batch vs streaming | `Python` |
 
----
+<h3 align="center"><a href="https://github.com/amanda-martins-data?tab=repositories">Explorar os repositórios ↗</a></h3>
 
-## Decisões técnicas em destaque
+## 04 / Sala de controle
+
+**Linguagens e transformação**
+<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" />
+<img src="https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=postgresql&logoColor=white" />
+<img src="https://img.shields.io/badge/dbt-FF694B?style=flat-square&logo=dbt&logoColor=white" />
+<img src="https://img.shields.io/badge/DuckDB-FFF000?style=flat-square&logo=duckdb&logoColor=black" />
+
+**Orquestração e qualidade**
+<img src="https://img.shields.io/badge/Airflow-017CEE?style=flat-square&logo=apacheairflow&logoColor=white" />
+<img src="https://img.shields.io/badge/Great_Expectations-FF6310?style=flat-square" />
+<img src="https://img.shields.io/badge/pytest-0A9EDC?style=flat-square&logo=pytest&logoColor=white" />
+
+**Infraestrutura**
+<img src="https://img.shields.io/badge/Terraform-7B42BC?style=flat-square&logo=terraform&logoColor=white" />
+<img src="https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazonaws&logoColor=white" />
+<img src="https://img.shields.io/badge/Azure_ADLS_Gen2-0078D4?style=flat-square&logo=microsoftazure&logoColor=white" />
+<img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" />
+
+**BI e IA**
+<img src="https://img.shields.io/badge/Power_BI-F2C811?style=flat-square&logo=powerbi&logoColor=black" />
+<img src="https://img.shields.io/badge/Claude-D97757?style=flat-square&logo=anthropic&logoColor=white" />
+
+<table>
+<tr><th width="50%"><h3>SINAIS PÚBLICOS</h3></th><th width="50%"><h3>FERRAMENTAS</h3></th></tr>
+<tr>
+<td><img src="https://www.gitskins.com/api/section/stats?username=amanda-martins-data&theme=retro" alt="Estatísticas públicas do GitHub" width="410" /></td>
+<td><img src="https://www.gitskins.com/api/section/stack?username=amanda-martins-data&theme=retro" alt="Linguagens dos repositórios públicos" width="410" /></td>
+</tr>
+</table>
+
+## 05 / Decisões técnicas em destaque
 
 Cinco decisões que tomei, cada uma com o trade-off e o motivo registrados no repositório.
 
@@ -117,30 +117,37 @@ Cinco decisões que tomei, cada uma com o trade-off e o motivo registrados no re
 - **Streaming sem cluster (Projeto 12).** Na ADR 0010 decidi permanecer em batch. Para estar pronta quando um dos gatilhos aparecer, implementei e testei as garantias que importariam (particionamento, entrega at-least-once e compatibilidade de schema), sem provisionar Kafka.
 - **Uma suposição errada minha (Projeto 11).** Um teste apontou que eu tinha entendido mal o papel `data_consumer` e os datasets internos. A falha estava no teste, e eu corrigi e documentei a semântica correta.
 
----
-
-## Como ler meus repositórios
+## 06 / Como ler meus repositórios
 
 Em cada repositório descrevo o problema, a arquitetura e as limitações, e registro as decisões e as lacunas conhecidas. Há instruções para rodar do zero.
 
 A integração contínua roda no GitHub Actions, com selo de status no README. Oito repositórios executam os testes a cada alteração (04, 05, 06, 08, 10, 11, 12 e 13), e três verificam a sintaxe do Python e rodam o `dbt parse` (01, 02 e 03). Os Projetos 07 e 09 são só documentação e ficam sem CI.
 
----
-
-## Em construção
+## 07 / Em construção
 
 - **Dados para IA:** pipeline de RAG tratado como engenharia de dados (ingestão, chunking, índice com atualização incremental, qualidade da recuperação) e servidor MCP sobre a camada Gold, com o controle de acesso do Projeto 11.
 - **Lakehouse em escala:** versão do Projeto 03 com Spark e formato de tabela Delta ou Iceberg, tratando schema evolution e compactação.
 - **Azure e warehouse em nuvem:** infraestrutura do Projeto 04 em Azure e o mesmo modelo dbt rodando em BigQuery ou Snowflake.
 - **Contratos de dados:** estender o contrato do catálogo (Projeto 08) para validar as fontes do Projeto 13.
 
+<details>
+<summary><h3>08 / Arquivo de atividade</h3></summary>
+
+![Cidade de contribuições](https://www.gitskins.com/api/section/city?username=amanda-martins-data&theme=retro)
+
+### Contribuições do dia a dia
+
+![Calendário de contribuições](https://www.gitskins.com/api/section/heatmap?username=amanda-martins-data&theme=retro)
+
+</details>
+
 ---
 
-## Contato
+<h2 align="center">O próximo bloco começa com uma conversa.</h2>
 
-<div align="left">
-
+<p align="center">
 <a href="https://www.linkedin.com/in/amandamartinsdts/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" /></a>
 <a href="mailto:amanda_mdantas@outlook.com"><img src="https://img.shields.io/badge/Email-D14836?style=flat-square&logo=gmail&logoColor=white" /></a>
+</p>
 
-</div>
+<p align="center"><sub>Amanda Martins · <a href="https://www.gitskins.com/readme-generator?template=community-builder-s-workbench-city-edition-9udn">Builder’s Workbench — City Edition</a> template by <a href="https://www.gitskins.com/creators/pengusto">@pengusto</a> · generated with <a href="https://www.gitskins.com/readme-generator">GitSkins</a></sub></p>
