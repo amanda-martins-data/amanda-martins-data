@@ -9,100 +9,72 @@
 
 <p align="center"><img src="https://www.gitskins.com/api/section/city?username=amanda-martins-data&theme=retro" width="860" alt="Skyline de contribuições no GitHub" /></p>
 
-## 01 / Em 30 segundos
+Profissional de dados com 6+ anos de experiência e pós-graduação em Arquitetura de Dados (PUC Minas). Construo pipelines em Python e SQL, arquitetura em camadas no Azure e decisões de arquitetura documentadas. Busco posições de **Engenharia de Dados (Pleno)** ou **Analytics Engineering**, remotas ou híbridas.
 
-```python
-class AmandaMartins:
-    def __init__(self):
-        self.experience   = "6+ years in Data"
-        self.role         = "Data Engineering & Architecture"
-        self.focus_areas  = ["Data Pipelines", "Data Architecture", "Data for AI"]
-        self.stack        = ["Python", "SQL", "dbt", "Airflow", "DuckDB", "Terraform", "Azure/AWS"]
-        self.education    = "Post-Graduate in Data Architecture, PUC Minas"
-```
+## 01 / Resultados
 
-| | |
-|---|---|
-| **O que eu faço** | Projeto e mantenho pipelines ELT, camadas de dados (Bronze/Silver/Gold) e a governança em volta delas |
-| **Diferencial** | Registro em cada projeto as decisões que tomei, as limitações e o gatilho para revisá-las. Os erros que encontrei pelo caminho também ficam documentados |
-| **Projetos** | 13 publicados. No mais recente trabalhei com dados públicos reais: 594 estações do INMET, 5.570 municípios do IBGE e leituras da CETESB |
-| **Procuro** | Engenheira de Dados (Pleno) ou Analytics Engineer |
+**Na CPEA** · Analista de Dados Pleno, Engenharia de Dados (out/2025 – atual)
 
-## 02 / Três pilares
+- **5 áreas de negócio atendidas** por pipelines em Python que integram APIs REST (incluindo ArcGIS) ao ADLS Gen2 e à camada analítica em DuckDB e SQL.
+- **30% menos tempo de execução** ao converter um processo manual em planilhas em pipeline via API REST, gravando na camada bronze.
+- **Zero segredos nos repositórios:** deploy com GitHub Actions e federação de identidade (OIDC); aplicações em Docker no Azure Container Apps, com Key Vault e Entra ID.
+- **Aplicações de dados ponta a ponta:** bancos PostgreSQL com migrações versionadas e auditadas, APIs em FastAPI e integração com interfaces web.
 
-<table>
-<tr>
-<td valign="top" width="33%"><h3>🏛 Arquitetura com decisões documentadas</h3>Solução proporcional ao estágio do problema, com o gatilho para mudar registrado.<br><br><sub>Projetos <a href="https://github.com/amanda-martins-data/adr-arquitetura-dados">07</a> · <a href="https://github.com/amanda-martins-data/blueprint-arquitetura-corporativa">09</a> · <a href="https://github.com/amanda-martins-data/capacity-planning-qualidade-ar">10</a></sub></td>
-<td valign="top" width="33%"><h3>🧰 Pipelines confiáveis sobre fontes heterogêneas</h3>Orquestração, idempotência, testes de dados e resolução de entidades em dado sujo.<br><br><sub>Projetos <a href="https://github.com/amanda-martins-data/pipeline-qualidade-ar">01</a> · <a href="https://github.com/amanda-martins-data/orquestracao-airflow-qualidade-ar">02</a> · <a href="https://github.com/amanda-martins-data/arquitetura-medallion-qualidade-ar">03</a> · <a href="https://github.com/amanda-martins-data/pipeline-multi-fonte-dados-publicos">13</a></sub></td>
-<td valign="top" width="33%"><h3>🚀 Dados para IA</h3>IA aplicada à checagem de qualidade de dados; RAG e servidor MCP sobre a camada Gold em construção.<br><br><sub>Projeto <a href="https://github.com/amanda-martins-data/ai-pipeline-qualidade-ar">05</a></sub></td>
-</tr>
-</table>
+**Organização e governança**
 
-## 03 / Distrito de projetos
+- Apoio a organização técnica da equipe de dados: estruturação do roadmap e gestão das entregas no Azure DevOps.
+- Contribuo com a governança de IA e proteção de dados da empresa: políticas de uso, mapeamento de riscos e automações com IA (OCR e geração de relatórios).
+
+**No portfólio público**
+
+- **5.025.594 linhas reais** do INMET integradas a 5.570 municípios do IBGE e a leituras da CETESB.
+- **100% de resolução de municípios** com nome e UF, após identificar que 9,4% não são alcançáveis só pelo nome.
+- **13 projetos publicados, 11 com CI** no GitHub Actions; decisões registradas em ADRs, com alternativas e gatilho de revisão.
+
+## 02 / Projetos em destaque
 
 <p align="center"><img src="assets/projects-pt.svg" width="860" alt="Projetos em destaque" /></p>
 
-### Pipelines e camadas de dados
+| Projeto | Problema | Resultado |
+|---|---|---|
+| [13 · Pipeline multi-fonte](https://github.com/amanda-martins-data/pipeline-multi-fonte-dados-publicos) | Três fontes públicas com chaves que não casam | 5M+ linhas unidas por município; 100% de resolução com nome e UF |
+| [03 · Arquitetura Medallion](https://github.com/amanda-martins-data/arquitetura-medallion-qualidade-ar) | Reprocessar sem duplicar dados | Bronze/Silver/Gold em Parquet com dbt; reexecução gera o mesmo resultado |
+| [02 · Orquestração com Airflow](https://github.com/amanda-martins-data/orquestracao-airflow-qualidade-ar) | Pipeline manual e sem tolerância a falhas | Agendamento, retries com backoff e alertas; troca de fonte sem redeploy |
+| [04 · IaC na AWS](https://github.com/amanda-martins-data/iac-pipeline-cloud-qualidade-ar) | Infraestrutura criada à mão | Lambda, S3 e RDS versionados em Terraform |
+| [10 · Capacity planning](https://github.com/amanda-martins-data/capacity-planning-qualidade-ar) | Saber quando a arquitetura quebra | Ponto de ruptura calculado em 45,2x o volume atual; 14/14 testes |
+| [11 · Segurança e acesso](https://github.com/amanda-martins-data/seguranca-acesso-dados) | Controle de acesso a dados sensíveis | RBAC testado, mascaramento de PII e trilha de auditoria |
 
-| # | Projeto | O que entrega | Stack |
-|---|---|---|---|
-| 01 | [Pipeline ELT com dbt](https://github.com/amanda-martins-data/pipeline-qualidade-ar) | Ingestão do OpenAQ, modelagem dimensional e testes declarativos | `Python` `dbt` `DuckDB` |
-| 02 | [Orquestração com Airflow](https://github.com/amanda-martins-data/orquestracao-airflow-qualidade-ar) | Agendamento, retries com backoff, alertas e ramificação sem redeploy | `Airflow` `Docker` |
-| 03 | [Arquitetura Medallion](https://github.com/amanda-martins-data/arquitetura-medallion-qualidade-ar) | Bronze/Silver/Gold em Parquet, idempotência por reescrita de partição | `Parquet` `dbt` |
-| 13 | [Pipeline multi-fonte](https://github.com/amanda-martins-data/pipeline-multi-fonte-dados-publicos) | INMET + IBGE + CETESB unidos por município, com resolução em camadas | `Python` `pytest` |
+<details>
+<summary><b>Todos os 13 projetos</b></summary>
 
-### Arquitetura, governança e segurança
+| # | Projeto | Entrega |
+|---|---|---|
+| 01 | [Pipeline ELT com dbt](https://github.com/amanda-martins-data/pipeline-qualidade-ar) | Ingestão do OpenAQ, modelo dimensional e testes declarativos |
+| 02 | [Orquestração com Airflow](https://github.com/amanda-martins-data/orquestracao-airflow-qualidade-ar) | DAG com retries, alertas e ramificação |
+| 03 | [Arquitetura Medallion](https://github.com/amanda-martins-data/arquitetura-medallion-qualidade-ar) | Camadas Bronze/Silver/Gold em Parquet |
+| 04 | [IaC na AWS](https://github.com/amanda-martins-data/iac-pipeline-cloud-qualidade-ar) | Lambda, S3 e RDS em Terraform |
+| 05 | [Pipeline com IA](https://github.com/amanda-martins-data/ai-pipeline-qualidade-ar) | Agentes de IA para qualidade e documentação de dados |
+| 06 | [Observabilidade](https://github.com/amanda-martins-data/observabilidade-qualidade-ar) | Great Expectations e checagens de frescor e completude |
+| 07 | [ADRs](https://github.com/amanda-martins-data/adr-arquitetura-dados) | Decisões de arquitetura com alternativas e gatilho de revisão |
+| 08 | [Governança e catálogo](https://github.com/amanda-martins-data/governanca-catalogo-dados) | RACI, retenção, classificação LGPD e catálogo com linhagem |
+| 09 | [Blueprint corporativo](https://github.com/amanda-martins-data/blueprint-arquitetura-corporativa) | Modelos conceitual, lógico e físico e requisitos não funcionais |
+| 10 | [Capacity planning](https://github.com/amanda-martins-data/capacity-planning-qualidade-ar) | Ruptura a 10x e 100x, com modelo de custo testado |
+| 11 | [Segurança e acesso](https://github.com/amanda-martins-data/seguranca-acesso-dados) | RBAC, mascaramento de PII e auditoria |
+| 12 | [Streaming](https://github.com/amanda-martins-data/streaming-qualidade-ar) | Schema registry e event bus com garantias testadas |
+| 13 | [Pipeline multi-fonte](https://github.com/amanda-martins-data/pipeline-multi-fonte-dados-publicos) | INMET + IBGE + CETESB com resolução de entidades |
 
-| # | Projeto | O que entrega | Stack |
-|---|---|---|---|
-| 07 | [ADRs de arquitetura](https://github.com/amanda-martins-data/adr-arquitetura-dados) | Registro de decisões com contexto, alternativas e gatilho de revisão | `ADR` |
-| 08 | [Governança e catálogo](https://github.com/amanda-martins-data/governanca-catalogo-dados) | Papéis, RACI, retenção e classificação com mapeamento à LGPD; catálogo gerado de YAML, com linhagem verificada | `Python` `YAML` |
-| 09 | [Blueprint corporativo](https://github.com/amanda-martins-data/blueprint-arquitetura-corporativa) | Modelo conceitual, lógico e físico, fluxo de dados e requisitos não funcionais de uma organização fictícia, sem código | `Arquitetura` |
-| 10 | [Capacity planning](https://github.com/amanda-martins-data/capacity-planning-qualidade-ar) | Onde cada componente da infraestrutura do Projeto 04 quebra a 10x e 100x, com modelo de custo testado e plano de re-arquitetura | `Python` |
-| 11 | [Segurança e acesso](https://github.com/amanda-martins-data/seguranca-acesso-dados) | RBAC testado sobre o catálogo do Projeto 08, mascaramento de PII e trilha de auditoria | `Python` |
+</details>
 
-### Qualidade, IA e infraestrutura
-
-| # | Projeto | O que entrega | Stack |
-|---|---|---|---|
-| 04 | [IaC para pipeline cloud](https://github.com/amanda-martins-data/iac-pipeline-cloud-qualidade-ar) | Lambda, S3 e RDS versionados como código | `Terraform` `AWS` |
-| 05 | [Pipeline com IA integrada](https://github.com/amanda-martins-data/ai-pipeline-qualidade-ar) | Agente de IA para checagem de qualidade e documentação | `Claude` `LLMs` |
-| 06 | [Observabilidade e qualidade](https://github.com/amanda-martins-data/observabilidade-qualidade-ar) | Testes de dados e monitoramento de qualidade | `Great Expectations` |
-| 12 | [Streaming orientado a eventos](https://github.com/amanda-martins-data/streaming-qualidade-ar) | Schema registry e event bus em memória com garantias testadas, e modelo de latência batch vs streaming | `Python` |
-
-<h3 align="center"><a href="https://github.com/amanda-martins-data?tab=repositories">Explorar os repositórios ↗</a></h3>
-
-## 04 / Stack
+## 03 / Stack
 
 <p align="center"><img src="assets/stack-pt.svg" width="860" alt="Stack do portfólio" /></p>
 
-## 05 / Decisões técnicas em destaque
+## 04 / Em construção
 
-Cinco decisões que tomei, cada uma com o trade-off e o motivo registrados no repositório.
-
-- **Parquet com dbt lendo e escrevendo os arquivos direto (Projeto 03).** O mesmo arquivo serve a DuckDB, Spark ou pandas sem reprocessar. Abri mão de índices e do controle de acesso nativo de um warehouse, e deixei o gatilho de revisão registrado.
-- **Idempotência por reescrita de partição (Projeto 03).** Na Silver eu apago e reescrevo cada partição afetada, então rodar a transformação duas vezes dá o mesmo resultado. Esse método fica caro em volume alto, e o README do projeto registra isso.
-- **Resolução de entidades em camadas (Projeto 13).** Descobri que 9,4% dos municípios não são alcançáveis só pelo nome. Resolvo da evidência mais forte para a mais fraca, e o que continua ambíguo vai para quarentena: 100% de resolução com nome e UF, 90,6% só com nome.
-- **Streaming sem cluster (Projeto 12).** Na ADR 0010 decidi permanecer em batch. Para estar pronta quando um dos gatilhos aparecer, implementei e testei as garantias que importariam (particionamento, entrega at-least-once e compatibilidade de schema), sem provisionar Kafka.
-- **Uma suposição errada minha (Projeto 11).** Um teste apontou que eu tinha entendido mal o papel `data_consumer` e os datasets internos. A falha estava no teste, e eu corrigi e documentei a semântica correta.
-
-## 06 / Como ler meus repositórios
-
-Em cada repositório descrevo o problema, a arquitetura e as limitações, e registro as decisões e as lacunas conhecidas. Há instruções para rodar do zero.
-
-A integração contínua roda no GitHub Actions, com selo de status no README. Oito repositórios executam os testes a cada alteração (04, 05, 06, 08, 10, 11, 12 e 13), e três verificam a sintaxe do Python e rodam o `dbt parse` (01, 02 e 03). Os Projetos 07 e 09 são só documentação e ficam sem CI.
-
-## 07 / Em construção
-
-- **Dados para IA:** pipeline de RAG tratado como engenharia de dados (ingestão, chunking, índice com atualização incremental, qualidade da recuperação) e servidor MCP sobre a camada Gold, com o controle de acesso do Projeto 11.
-- **Lakehouse em escala:** versão do Projeto 03 com Spark e formato de tabela Delta ou Iceberg, tratando schema evolution e compactação.
-- **Azure e warehouse em nuvem:** infraestrutura do Projeto 04 em Azure e o mesmo modelo dbt rodando em BigQuery ou Snowflake.
-- **Contratos de dados:** estender o contrato do catálogo (Projeto 08) para validar as fontes do Projeto 13.
-
+- **Lakehouse no Azure como código:** ADLS Gen2, Databricks e Unity Catalog em Terraform, com jobs PySpark e Delta Lake.
+- **Dados para IA:** pipeline de RAG e servidor MCP sobre a camada Gold, com o controle de acesso do Projeto 11.
 
 ---
-
-<h2 align="center">O próximo bloco começa com uma conversa.</h2>
 
 <p align="center">
 <a href="https://www.linkedin.com/in/amandamartinsdts/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" /></a>
