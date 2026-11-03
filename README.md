@@ -9,7 +9,7 @@
 
 <p align="center"><img src="https://www.gitskins.com/api/section/city?username=amanda-martins-data&theme=retro" width="860" alt="Skyline de contribuições no GitHub" /></p>
 
-Profissional de dados com 6+ anos de experiência e pós-graduação em Arquitetura de Dados (PUC Minas). Construo pipelines em Python e SQL, arquitetura em camadas no Azure e decisões de arquitetura documentadas. Busco posições de **Engenharia de Dados (Pleno)** ou **Analytics Engineering**, remotas ou híbridas.
+Profissional de dados com 6+ anos de experiência e pós-graduação em Arquitetura de Dados (PUC Minas). Construo pipelines em Python e SQL, arquitetura em camadas no Azure e decisões de arquitetura documentadas. Busco posições de **Engenharia de Dados** ou **Analytics Engineering**, remotas ou híbridas.
 
 ## 01 / Resultados
 
