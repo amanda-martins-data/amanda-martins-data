@@ -9,7 +9,7 @@
 
 <p align="center"><img src="https://www.gitskins.com/api/section/city?username=amanda-martins-data&theme=retro" width="860" alt="GitHub contribution skyline" /></p>
 
-Data professional with 6+ years of experience and a post-graduate degree in Data Architecture (PUC Minas). I build pipelines in Python and SQL, layered architectures on Azure and documented architecture decisions. Looking for **Data Engineering (Mid-level)** or **Analytics Engineering** roles, remote or hybrid.
+Data professional with 6+ years of experience and a post-graduate degree in Data Architecture (PUC Minas). I build pipelines in Python and SQL, layered architectures on Azure and documented architecture decisions. Looking for **Data Engineering** or **Analytics Engineering** roles, remote or hybrid.
 
 ## 01 / Results
 
