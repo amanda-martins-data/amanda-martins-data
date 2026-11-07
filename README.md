@@ -1,39 +1,37 @@
 **Português** | [English](README.en.md)
 
-<p align="center"><img src="assets/hero-pt.svg" width="860" alt="Amanda Martins, Engenharia e Arquitetura de Dados" /></p>
+<p align="center"><img src="assets/hero-pt.svg" width="860" alt="Amanda Martins, Engenharia de Dados e Analytics Engineering" /></p>
 
 <p align="center">
 <a href="https://www.linkedin.com/in/amandamartinsdts/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" /></a>
 <a href="mailto:amanda_mdantas@outlook.com"><img src="https://img.shields.io/badge/Email-D14836?style=flat-square&logo=gmail&logoColor=white" /></a>
 </p>
 
-<p align="center"><img src="https://www.gitskins.com/api/section/city?username=amanda-martins-data&theme=retro" width="860" alt="Skyline de contribuições no GitHub" /></p>
-
-Profissional de dados com 6+ anos de experiência e pós-graduação em Arquitetura de Dados (PUC Minas). Construo pipelines em Python e SQL, arquitetura em camadas no Azure e decisões de arquitetura documentadas. Busco posições de **Engenharia de Dados** ou **Analytics Engineering**, remotas ou híbridas.
+Profissional de dados desde 2020, pós-graduada em Arquitetura de Dados (PUC Minas). Hoje construo pipelines em produção com Python e SQL no Azure, com deploy automatizado e decisões de arquitetura documentadas. Busco posições de **Engenharia de Dados** ou **Analytics Engineering**, remotas ou híbridas.
 
 ## 01 / Resultados
 
 **Na CPEA** · Analista de Dados Pleno, Engenharia de Dados (out/2025 – atual)
 
 - **5 áreas de negócio atendidas** por pipelines em Python que integram APIs REST (incluindo ArcGIS) ao ADLS Gen2 e à camada analítica em DuckDB e SQL.
-- **30% menos tempo de execução** ao converter um processo manual em planilhas em pipeline via API REST, gravando na camada bronze.
+- **30% menos tempo de execução** em um dos processos, ao converter um fluxo manual em planilhas em pipeline via API REST, gravando na camada bronze.
 - **Zero segredos nos repositórios:** deploy com GitHub Actions e federação de identidade (OIDC); aplicações em Docker no Azure Container Apps, com Key Vault e Entra ID.
 - **Aplicações de dados ponta a ponta:** bancos PostgreSQL com migrações versionadas e auditadas, APIs em FastAPI e integração com interfaces web.
+- **Organização e governança:** estruturação do roadmap da equipe de dados no Azure DevOps; políticas de uso de IA, mapeamento de riscos e automações com IA (OCR e geração de relatórios).
 
-**Organização e governança**
+**Antes** · Análise de dados (2020 – 2025)
 
-- Apoio a organização técnica da equipe de dados: estruturação do roadmap e gestão das entregas no Azure DevOps.
-- Contribuo com a governança de IA e proteção de dados da empresa: políticas de uso, mapeamento de riscos e automações com IA (OCR e geração de relatórios).
+- Dashboards e frameworks de KPIs em Power BI para operação, vendas e metas corporativas, em setores como educação, aviação e mobilidade.
+- Ciclo de vida completo dos dados para relatórios corporativos anuais: coleta, validação, qualidade e entrega analítica.
+- Análises estatísticas e apresentações para liderança, comitês internos e clientes; certificação Lean Six Sigma Green Belt (2024).
 
 **No portfólio público**
 
-- **5.025.594 linhas reais** do INMET integradas a 5.570 municípios do IBGE e a leituras da CETESB.
-- **100% de resolução de municípios** com nome e UF, após identificar que 9,4% não são alcançáveis só pelo nome.
+- **5.025.594 linhas reais** de três fontes públicas (INMET, IBGE e CETESB) unidas por município.
+- **100% de resolução de entidades** com nome e UF, após identificar que 9,4% dos municípios não são alcançáveis só pelo nome.
 - **13 projetos publicados, 11 com CI** no GitHub Actions; decisões registradas em ADRs, com alternativas e gatilho de revisão.
 
 ## 02 / Projetos em destaque
-
-<p align="center"><img src="assets/projects-pt.svg" width="860" alt="Projetos em destaque" /></p>
 
 | Projeto | Problema | Resultado |
 |---|---|---|
@@ -49,7 +47,7 @@ Profissional de dados com 6+ anos de experiência e pós-graduação em Arquitet
 
 | # | Projeto | Entrega |
 |---|---|---|
-| 01 | [Pipeline ELT com dbt](https://github.com/amanda-martins-data/pipeline-qualidade-ar) | Ingestão do OpenAQ, modelo dimensional e testes declarativos |
+| 01 | [Pipeline ELT com dbt](https://github.com/amanda-martins-data/pipeline-qualidade-ar) | Ingestão de API pública, modelo dimensional e testes declarativos |
 | 02 | [Orquestração com Airflow](https://github.com/amanda-martins-data/orquestracao-airflow-qualidade-ar) | DAG com retries, alertas e ramificação |
 | 03 | [Arquitetura Medallion](https://github.com/amanda-martins-data/arquitetura-medallion-qualidade-ar) | Camadas Bronze/Silver/Gold em Parquet |
 | 04 | [IaC na AWS](https://github.com/amanda-martins-data/iac-pipeline-cloud-qualidade-ar) | Lambda, S3 e RDS em Terraform |
@@ -61,13 +59,13 @@ Profissional de dados com 6+ anos de experiência e pós-graduação em Arquitet
 | 10 | [Capacity planning](https://github.com/amanda-martins-data/capacity-planning-qualidade-ar) | Ruptura a 10x e 100x, com modelo de custo testado |
 | 11 | [Segurança e acesso](https://github.com/amanda-martins-data/seguranca-acesso-dados) | RBAC, mascaramento de PII e auditoria |
 | 12 | [Streaming](https://github.com/amanda-martins-data/streaming-qualidade-ar) | Schema registry e event bus com garantias testadas |
-| 13 | [Pipeline multi-fonte](https://github.com/amanda-martins-data/pipeline-multi-fonte-dados-publicos) | INMET + IBGE + CETESB com resolução de entidades |
+| 13 | [Pipeline multi-fonte](https://github.com/amanda-martins-data/pipeline-multi-fonte-dados-publicos) | Três fontes públicas unidas com resolução de entidades |
 
 </details>
 
 ## 03 / Stack
 
-<p align="center"><img src="assets/stack-pt.svg" width="860" alt="Stack do portfólio" /></p>
+<p align="center"><img src="assets/stack-pt.svg" width="860" alt="Stack: Python, SQL, PostgreSQL, dbt, DuckDB, Airflow, Great Expectations, pytest, GitHub Actions, Azure (ADLS Gen2, Container Apps, Key Vault, Entra ID), Terraform, Docker, AWS, FastAPI, Power BI, Claude" /></p>
 
 ## 04 / Em construção
 
