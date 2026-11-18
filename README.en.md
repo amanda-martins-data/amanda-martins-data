@@ -29,7 +29,7 @@ Data professional since 2020, with a post-graduate degree in Data Architecture (
 
 - **5,025,594 real rows** from three public sources (INMET, IBGE and CETESB) joined by municipality.
 - **100% entity resolution** with name and state, after finding that 9.4% of municipalities cannot be reached by name alone.
-- **13 published projects, 11 with CI** on GitHub Actions; decisions recorded as ADRs, with alternatives and a review trigger.
+- **14 published projects, 12 with CI** on GitHub Actions; decisions recorded as ADRs, with alternatives and a review trigger.
 
 ## 02 / Featured projects
 
@@ -39,13 +39,14 @@ The documentation inside each repository is in Portuguese.
 |---|---|---|
 | [13 · Multi-source pipeline](https://github.com/amanda-martins-data/pipeline-multi-fonte-dados-publicos) | Three public sources whose keys do not match | 5M+ rows joined by municipality; 100% resolution with name and state |
 | [03 · Medallion architecture](https://github.com/amanda-martins-data/arquitetura-medallion-qualidade-ar) | Reprocessing without duplicating data | Bronze/Silver/Gold on Parquet with dbt; a rerun gives the same result |
+| [14 · Medallion on Snowflake](https://github.com/amanda-martins-data/snowflake-medallion-qualidade-ar) | Taking the Medallion to a cloud data warehouse | Idempotent COPY INTO, Bronze in VARIANT and incremental Silver with MERGE; least-privilege roles |
 | [02 · Airflow orchestration](https://github.com/amanda-martins-data/orquestracao-airflow-qualidade-ar) | A manual pipeline with no fault tolerance | Scheduling, retries with backoff and alerts; switching sources without redeploys |
 | [04 · IaC on AWS](https://github.com/amanda-martins-data/iac-pipeline-cloud-qualidade-ar) | Infrastructure created by hand | Lambda, S3 and RDS versioned in Terraform |
 | [10 · Capacity planning](https://github.com/amanda-martins-data/capacity-planning-qualidade-ar) | Knowing when the architecture breaks | Breaking point calculated at 45.2x current volume; 14/14 tests |
 | [11 · Security and access](https://github.com/amanda-martins-data/seguranca-acesso-dados) | Access control for sensitive data | Tested RBAC, PII masking and an audit trail |
 
 <details>
-<summary><b>All 13 projects</b></summary>
+<summary><b>All 14 projects</b></summary>
 
 | # | Project | Delivers |
 |---|---|---|
@@ -62,12 +63,13 @@ The documentation inside each repository is in Portuguese.
 | 11 | [Security and access](https://github.com/amanda-martins-data/seguranca-acesso-dados) | RBAC, PII masking and auditing |
 | 12 | [Streaming](https://github.com/amanda-martins-data/streaming-qualidade-ar) | Schema registry and event bus with tested guarantees |
 | 13 | [Multi-source pipeline](https://github.com/amanda-martins-data/pipeline-multi-fonte-dados-publicos) | Three public sources joined with entity resolution |
+| 14 | [Medallion on Snowflake](https://github.com/amanda-martins-data/snowflake-medallion-qualidade-ar) | Native Bronze/Silver/Gold on Snowflake with dbt and RBAC |
 
 </details>
 
 ## 03 / Stack
 
-<p align="center"><img src="assets/stack-en.svg" width="860" alt="Stack: Python, SQL, PostgreSQL, dbt, DuckDB, Airflow, Great Expectations, pytest, GitHub Actions, Azure (ADLS Gen2, Container Apps, Key Vault, Entra ID), Terraform, Docker, AWS, FastAPI, Power BI, Claude" /></p>
+<p align="center"><img src="assets/stack-en.svg" width="860" alt="Stack: Python, SQL, PostgreSQL, dbt, DuckDB, Snowflake, Airflow, Great Expectations, pytest, GitHub Actions, Azure (ADLS Gen2, Container Apps, Key Vault, Entra ID), Terraform, Docker, AWS, FastAPI, Power BI, Claude" /></p>
 
 ## 04 / In progress
 
