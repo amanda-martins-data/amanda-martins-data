@@ -74,6 +74,8 @@ Profissional de dados desde 2020, pós-graduada em Arquitetura de Dados (PUC Min
 - **Lakehouse no Azure como código:** ADLS Gen2, Databricks e Unity Catalog em Terraform, com jobs PySpark e Delta Lake.
 - **Dados para IA:** pipeline de RAG e servidor MCP sobre a camada Gold, com o controle de acesso do Projeto 11.
 
+<p align="center"><img src="https://www.gitskins.com/api/section/city?username=amanda-martins-data&theme=retro" width="860" alt="Skyline de contribuições no GitHub" /></p>
+
 ---
 
 <p align="center">

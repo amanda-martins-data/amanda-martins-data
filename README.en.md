@@ -76,6 +76,8 @@ The documentation inside each repository is in Portuguese.
 - **Azure lakehouse as code:** ADLS Gen2, Databricks and Unity Catalog in Terraform, with PySpark and Delta Lake jobs.
 - **Data for AI:** a RAG pipeline and an MCP server on the Gold layer, using the access control from Project 11.
 
+<p align="center"><img src="https://www.gitskins.com/api/section/city?username=amanda-martins-data&theme=retro" width="860" alt="GitHub contribution skyline" /></p>
+
 ---
 
 <p align="center">
