@@ -7,46 +7,75 @@
 <a href="mailto:amanda_mdantas@outlook.com"><img src="https://img.shields.io/badge/Email-D14836?style=flat-square&logo=gmail&logoColor=white" /></a>
 </p>
 
-Data professional since 2020, with a post-graduate degree in Data Architecture (PUC Minas). I currently build production pipelines in Python and SQL on Azure, with automated deployment and documented architecture decisions. Looking for **Data Engineering** or **Analytics Engineering** roles, remote or hybrid.
+Data engineer. At work, I build production pipelines on Azure; in my portfolio, a complete data platform around a single domain, from ingestion to governance. Looking for **Data Engineering** or **Analytics Engineering** roles, remote or hybrid.
 
-## 01 / Results
+## 01 / The platform
 
-**At CPEA** · Mid-level Data Analyst, Data Engineering (Oct 2025 – present)
+Fourteen projects, one domain: air quality and climate in Brazil. Each project solves one layer of the platform, and the decisions made in one show up in the next.
 
-- **5 business areas served** by Python pipelines that integrate REST APIs (including ArcGIS) with ADLS Gen2 and an analytics layer in DuckDB and SQL.
-- **30% shorter run time** in one of the processes, after turning a manual spreadsheet workflow into an API-based pipeline that writes to the bronze layer.
-- **No secrets in repositories:** deployment with GitHub Actions and identity federation (OIDC); Docker apps on Azure Container Apps with Key Vault and Entra ID.
-- **End-to-end data applications:** PostgreSQL databases with versioned, audited migrations, FastAPI services and web interface integration.
-- **Organization and governance:** roadmap structuring for the data team in Azure DevOps; AI usage policies, risk mapping and AI automations (OCR and report generation).
+<p align="center"><img src="assets/platform-en.svg" width="860" alt="Platform map: public sources feed ingestion (01, 02, 12, 13) and storage (03, 14, 04), which serve Power BI and AI; reliability (06, 05, 10) and governance (07, 08, 09, 11) cut across the whole platform" /></p>
 
-**Before** · Data analysis (2020 – 2025)
+## 02 / Case studies
 
-- KPI dashboards and frameworks in Power BI for operations, sales and corporate goals, in sectors such as education, aviation and mobility.
-- Full data lifecycle for annual corporate reports: collection, validation, quality and analytical delivery.
-- Statistical analyses and presentations for leadership, internal committees and clients; Lean Six Sigma Green Belt certification (2024).
+<table>
+<tr>
+<td width="33%" valign="top">
 
-**In the public portfolio**
+**[Keys that don't match](https://github.com/amanda-martins-data/pipeline-multi-fonte-dados-publicos)**<br>
+<sub>Project 13 · Python · DuckDB</sub>
 
-- **5,025,594 real rows** from three public sources (INMET, IBGE and CETESB) joined by municipality.
-- **100% entity resolution** with name and state, after finding that 9.4% of municipalities cannot be reached by name alone.
-- **14 published projects, 12 with CI** on GitHub Actions; decisions recorded as ADRs, with alternatives and a review trigger.
+**Problem:** three public sources with no common key.
 
-## 02 / Featured projects
+**Finding:** 9.4% of Brazilian municipalities can't be reached by name alone, and stripping accents creates 8 new collisions.
 
-The documentation inside each repository is in Portuguese.
+**Decision:** resolve by name + state, with coordinates only as supporting evidence ([ADR 0012](https://github.com/amanda-martins-data/pipeline-multi-fonte-dados-publicos/blob/main/decisions/0012-estrategia-para-municipios-sem-correspondencia.md)).
 
-| Project | Problem | Result |
-|---|---|---|
-| [13 · Multi-source pipeline](https://github.com/amanda-martins-data/pipeline-multi-fonte-dados-publicos) | Three public sources whose keys do not match | 5M+ rows joined by municipality; 100% resolution with name and state |
-| [03 · Medallion architecture](https://github.com/amanda-martins-data/arquitetura-medallion-qualidade-ar) | Reprocessing without duplicating data | Bronze/Silver/Gold on Parquet with dbt; a rerun gives the same result |
-| [14 · Medallion on Snowflake](https://github.com/amanda-martins-data/snowflake-medallion-qualidade-ar) | Taking the Medallion to a cloud data warehouse | Idempotent COPY INTO, Bronze in VARIANT and incremental Silver with MERGE; least-privilege roles |
-| [02 · Airflow orchestration](https://github.com/amanda-martins-data/orquestracao-airflow-qualidade-ar) | A manual pipeline with no fault tolerance | Scheduling, retries with backoff and alerts; switching sources without redeploys |
-| [04 · IaC on AWS](https://github.com/amanda-martins-data/iac-pipeline-cloud-qualidade-ar) | Infrastructure created by hand | Lambda, S3 and RDS versioned in Terraform |
-| [10 · Capacity planning](https://github.com/amanda-martins-data/capacity-planning-qualidade-ar) | Knowing when the architecture breaks | Breaking point calculated at 45.2x current volume; 14/14 tests |
-| [11 · Security and access](https://github.com/amanda-martins-data/seguranca-acesso-dados) | Access control for sensitive data | Tested RBAC, PII masking and an audit trail |
+**Result:** 5M+ rows joined by municipality, 100% resolved with name and state.
+
+</td>
+<td width="33%" valign="top">
+
+**[Same architecture, two engines](https://github.com/amanda-martins-data/snowflake-medallion-qualidade-ar)**<br>
+<sub>Projects 03 and 14 · dbt · Snowflake</sub>
+
+**Problem:** reprocess without duplicates, then take the design to the cloud.
+
+**Decision:** the same Medallion on Parquet + DuckDB and natively on Snowflake, with `COPY INTO`, Bronze in `VARIANT` and an incremental Silver with `MERGE`.
+
+**Result:** idempotent reruns in both versions; 16/16 models and tests on Snowflake, with least-privilege roles.
+
+</td>
+<td width="33%" valign="top">
+
+**[When the architecture breaks](https://github.com/amanda-martins-data/capacity-planning-qualidade-ar)**<br>
+<sub>Project 10 · Python · AWS</sub>
+
+**Problem:** know how far the AWS infrastructure (Lambda, S3, RDS) can go.
+
+**Decision:** a capacity and cost model parameterized by volume, with tests.
+
+**Result:** Lambda breaks at 45.2x the current volume; the expected 10x growth runs in 203 s, a quarter of the limit.
+
+</td>
+</tr>
+</table>
+
+## 03 / In production
+
+**CPEA** · Mid-level Data Analyst, Data Engineering (Oct 2025 – present)
+
+- Python pipelines serving **5 business areas**, from REST APIs (including ArcGIS) to ADLS Gen2 and DuckDB; **30% less execution time** in one of the processes.
+- End-to-end data applications (PostgreSQL, FastAPI, Docker) on Azure Container Apps, deployed through OIDC with **zero secrets** in the repositories.
+- Rolled out Azure DevOps for the team's agile delivery and ran internal trainings, including data architecture for IT.
+
+<sub>Before: 5 years in data analysis and BI, across education, aviation and mobility. Lean Six Sigma Green Belt.</sub>
+
+## 04 / Stack
+
+<p align="center"><img src="assets/stack-en.svg" width="860" alt="Stack: Python, SQL, PostgreSQL, dbt, DuckDB, Snowflake, Airflow, Great Expectations, pytest, GitHub Actions, Azure (ADLS Gen2, Container Apps, Key Vault, Entra ID), Terraform, Docker, AWS, FastAPI, Power BI, Claude" /></p>
 
 <details>
-<summary><b>All 14 projects</b></summary>
+<summary><b>All 14 projects, one by one</b></summary>
 
 | # | Project | Delivers |
 |---|---|---|
@@ -65,16 +94,9 @@ The documentation inside each repository is in Portuguese.
 | 13 | [Multi-source pipeline](https://github.com/amanda-martins-data/pipeline-multi-fonte-dados-publicos) | Three public sources joined with entity resolution |
 | 14 | [Medallion on Snowflake](https://github.com/amanda-martins-data/snowflake-medallion-qualidade-ar) | Native Bronze/Silver/Gold on Snowflake with dbt and RBAC |
 
+**In progress:** an Azure lakehouse as code (Databricks, Unity Catalog, Terraform) and data for AI (RAG and an MCP server over the Gold layer).
+
 </details>
-
-## 03 / Stack
-
-<p align="center"><img src="assets/stack-en.svg" width="860" alt="Stack: Python, SQL, PostgreSQL, dbt, DuckDB, Snowflake, Airflow, Great Expectations, pytest, GitHub Actions, Azure (ADLS Gen2, Container Apps, Key Vault, Entra ID), Terraform, Docker, AWS, FastAPI, Power BI, Claude" /></p>
-
-## 04 / In progress
-
-- **Azure lakehouse as code:** ADLS Gen2, Databricks and Unity Catalog in Terraform, with PySpark and Delta Lake jobs.
-- **Data for AI:** a RAG pipeline and an MCP server on the Gold layer, using the access control from Project 11.
 
 <p align="center"><img src="https://www.gitskins.com/api/section/city?username=amanda-martins-data&theme=retro" width="860" alt="GitHub contribution skyline" /></p>
 

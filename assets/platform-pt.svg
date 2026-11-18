@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="484" viewBox="0 0 860 484" role="img" aria-label="Mapa da plataforma de dados do portfólio">
+<defs>
+<linearGradient id="plat-bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0c0a09"/><stop offset="54%" stop-color="#1f1f3d"/><stop offset="100%" stop-color="#0c0a09"/></linearGradient>
+<radialGradient id="plat-o1" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#ec4899" stop-opacity="0.55"/><stop offset="60%" stop-color="#ec4899" stop-opacity="0.12"/><stop offset="100%" stop-color="#ec4899" stop-opacity="0"/></radialGradient>
+<radialGradient id="plat-o2" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#7c3aed" stop-opacity="0.5"/><stop offset="60%" stop-color="#7c3aed" stop-opacity="0.1"/><stop offset="100%" stop-color="#7c3aed" stop-opacity="0"/></radialGradient>
+<linearGradient id="plat-line" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#ec4899"/><stop offset="100%" stop-color="#a855f7"/></linearGradient>
+<marker id="plat-arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M2 1L8 5L2 9" fill="none" stroke="#f9a8d4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></marker>
+<clipPath id="plat-clip"><rect x="1" y="1" width="858" height="482" rx="18"/></clipPath>
+</defs>
+<g clip-path="url(#plat-clip)">
+<rect width="860" height="484" fill="url(#plat-bg)"/>
+<circle cx="103.2" cy="48.4" r="435.6" fill="url(#plat-o1)"/>
+<circle cx="791.2" cy="459.8" r="387.2" fill="url(#plat-o2)"/>
+</g>
+<rect x="1" y="1" width="858" height="482" rx="18" fill="none" stroke="#ec4899" stroke-opacity="0.55" stroke-width="1.5"/>
+<text x="32" y="44" font-family="ui-monospace,'SF Mono',SFMono-Regular,Menlo,Consolas,monospace" font-size="13" font-weight="700" fill="#ec4899" fill-opacity="1" text-anchor="start" letter-spacing="2">PLATFORM.MAP</text>
+<text x="165.2" y="44" font-family="ui-monospace,'SF Mono',SFMono-Regular,Menlo,Consolas,monospace" font-size="12" font-weight="400" fill="#fce7f3" fill-opacity="0.6" text-anchor="start" letter-spacing="0">&gt; um domínio, o ciclo de vida inteiro</text>
+<line x1="32" y1="60" x2="828" y2="60" stroke="url(#plat-line)" stroke-opacity="0.7"/>
+<rect x="32" y="82" width="796" height="40" rx="10" fill="#ec4899" fill-opacity="0.08" stroke="#f9a8d4" stroke-opacity="0.5"/>
+<text x="430" y="107" font-family="ui-monospace,'SF Mono',SFMono-Regular,Menlo,Consolas,monospace" font-size="13" font-weight="600" fill="#fce7f3" fill-opacity="0.95" text-anchor="middle" letter-spacing="1">FONTES  ·  OpenAQ  ·  INMET  ·  IBGE  ·  CETESB</text>
+<rect x="32" y="156" width="187" height="204" rx="12" fill="#ec4899" fill-opacity="0.09" stroke="#f9a8d4" stroke-opacity="0.75"/>
+<text x="50" y="186" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="16" font-weight="700" fill="#fce7f3" fill-opacity="1" text-anchor="start" letter-spacing="0">Ingestão</text>
+<text x="50" y="206" font-family="ui-monospace,'SF Mono',SFMono-Regular,Menlo,Consolas,monospace" font-size="11.5" font-weight="400" fill="#f9a8d4" fill-opacity="0.9" text-anchor="start" letter-spacing="0">coleta e orquestra</text>
+<line x1="50" y1="220" x2="201" y2="220" stroke="#f9a8d4" stroke-opacity="0.35"/>
+<text x="50" y="248" font-family="ui-monospace,'SF Mono',SFMono-Regular,Menlo,Consolas,monospace" font-size="13" font-weight="400" fill="#fce7f3" fill-opacity="0.92" text-anchor="start" letter-spacing="0">01  ELT com dbt</text>
+<text x="50" y="275" font-family="ui-monospace,'SF Mono',SFMono-Regular,Menlo,Consolas,monospace" font-size="13" font-weight="400" fill="#fce7f3" fill-opacity="0.92" text-anchor="start" letter-spacing="0">02  Airflow</text>
+<text x="50" y="302" font-family="ui-monospace,'SF Mono',SFMono-Regular,Menlo,Consolas,monospace" font-size="13" font-weight="400" fill="#fce7f3" fill-opacity="0.92" text-anchor="start" letter-spacing="0">12  Streaming</text>
+<text x="50" y="329" font-family="ui-monospace,'SF Mono',SFMono-Regular,Menlo,Consolas,monospace" font-size="13" font-weight="400" fill="#fce7f3" fill-opacity="0.92" text-anchor="start" letter-spacing="0">13  Multi-fonte</text>
+<line x1="125.5" y1="124" x2="125.5" y2="152" stroke="#f9a8d4" stroke-opacity="0.8" stroke-width="1.4" marker-end="url(#plat-arr)"/>
+<line x1="125.5" y1="362" x2="125.5" y2="390" stroke="#f9a8d4" stroke-opacity="0.8" stroke-width="1.4" marker-end="url(#plat-arr)"/>
+<rect x="235" y="156" width="187" height="204" rx="12" fill="#ec4899" fill-opacity="0.09" stroke="#f9a8d4" stroke-opacity="0.75"/>
+<text x="253" y="186" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="16" font-weight="700" fill="#fce7f3" fill-opacity="1" text-anchor="start" letter-spacing="0">Armazenamento</text>
+<text x="253" y="206" font-family="ui-monospace,'SF Mono',SFMono-Regular,Menlo,Consolas,monospace" font-size="11.5" font-weight="400" fill="#f9a8d4" fill-opacity="0.9" text-anchor="start" letter-spacing="0">modela e versiona</text>
+<line x1="253" y1="220" x2="404" y2="220" stroke="#f9a8d4" stroke-opacity="0.35"/>
+<text x="253" y="248" font-family="ui-monospace,'SF Mono',SFMono-Regular,Menlo,Consolas,monospace" font-size="13" font-weight="400" fill="#fce7f3" fill-opacity="0.92" text-anchor="start" letter-spacing="0">03  Medallion</text>
+<text x="253" y="275" font-family="ui-monospace,'SF Mono',SFMono-Regular,Menlo,Consolas,monospace" font-size="13" font-weight="400" fill="#fce7f3" fill-opacity="0.92" text-anchor="start" letter-spacing="0">14  Snowflake</text>
+<text x="253" y="302" font-family="ui-monospace,'SF Mono',SFMono-Regular,Menlo,Consolas,monospace" font-size="13" font-weight="400" fill="#fce7f3" fill-opacity="0.92" text-anchor="start" letter-spacing="0">04  IaC na AWS</text>
+<line x1="328.5" y1="124" x2="328.5" y2="152" stroke="#f9a8d4" stroke-opacity="0.8" stroke-width="1.4" marker-end="url(#plat-arr)"/>
+<line x1="328.5" y1="362" x2="328.5" y2="390" stroke="#f9a8d4" stroke-opacity="0.8" stroke-width="1.4" marker-end="url(#plat-arr)"/>
+<rect x="438" y="156" width="187" height="204" rx="12" fill="#7c3aed" fill-opacity="0.09" stroke="#a855f7" stroke-opacity="0.75" stroke-dasharray="6 4"/>
+<text x="456" y="186" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="16" font-weight="700" fill="#fce7f3" fill-opacity="1" text-anchor="start" letter-spacing="0">Confiabilidade</text>
+<text x="456" y="206" font-family="ui-monospace,'SF Mono',SFMono-Regular,Menlo,Consolas,monospace" font-size="11.5" font-weight="400" fill="#a855f7" fill-opacity="0.9" text-anchor="start" letter-spacing="0">testa e dimensiona</text>
+<line x1="456" y1="220" x2="607" y2="220" stroke="#a855f7" stroke-opacity="0.35"/>
+<text x="456" y="248" font-family="ui-monospace,'SF Mono',SFMono-Regular,Menlo,Consolas,monospace" font-size="13" font-weight="400" fill="#fce7f3" fill-opacity="0.92" text-anchor="start" letter-spacing="0">06  Observabilidade</text>
+<text x="456" y="275" font-family="ui-monospace,'SF Mono',SFMono-Regular,Menlo,Consolas,monospace" font-size="13" font-weight="400" fill="#fce7f3" fill-opacity="0.92" text-anchor="start" letter-spacing="0">05  IA na qualidade</text>
+<text x="456" y="302" font-family="ui-monospace,'SF Mono',SFMono-Regular,Menlo,Consolas,monospace" font-size="13" font-weight="400" fill="#fce7f3" fill-opacity="0.92" text-anchor="start" letter-spacing="0">10  Capacity planning</text>
+<rect x="641" y="156" width="187" height="204" rx="12" fill="#7c3aed" fill-opacity="0.09" stroke="#a855f7" stroke-opacity="0.75" stroke-dasharray="6 4"/>
+<text x="659" y="186" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="16" font-weight="700" fill="#fce7f3" fill-opacity="1" text-anchor="start" letter-spacing="0">Governança</text>
+<text x="659" y="206" font-family="ui-monospace,'SF Mono',SFMono-Regular,Menlo,Consolas,monospace" font-size="11.5" font-weight="400" fill="#a855f7" fill-opacity="0.9" text-anchor="start" letter-spacing="0">decide e protege</text>
+<line x1="659" y1="220" x2="810" y2="220" stroke="#a855f7" stroke-opacity="0.35"/>
+<text x="659" y="248" font-family="ui-monospace,'SF Mono',SFMono-Regular,Menlo,Consolas,monospace" font-size="13" font-weight="400" fill="#fce7f3" fill-opacity="0.92" text-anchor="start" letter-spacing="0">07  ADRs</text>
+<text x="659" y="275" font-family="ui-monospace,'SF Mono',SFMono-Regular,Menlo,Consolas,monospace" font-size="13" font-weight="400" fill="#fce7f3" fill-opacity="0.92" text-anchor="start" letter-spacing="0">08  Catálogo e LGPD</text>
+<text x="659" y="302" font-family="ui-monospace,'SF Mono',SFMono-Regular,Menlo,Consolas,monospace" font-size="13" font-weight="400" fill="#fce7f3" fill-opacity="0.92" text-anchor="start" letter-spacing="0">09  Blueprint</text>
+<text x="659" y="329" font-family="ui-monospace,'SF Mono',SFMono-Regular,Menlo,Consolas,monospace" font-size="13" font-weight="400" fill="#fce7f3" fill-opacity="0.92" text-anchor="start" letter-spacing="0">11  Segurança</text>
+<rect x="32" y="394" width="796" height="40" rx="10" fill="#ec4899" fill-opacity="0.08" stroke="#f9a8d4" stroke-opacity="0.5"/>
+<text x="430" y="419" font-family="ui-monospace,'SF Mono',SFMono-Regular,Menlo,Consolas,monospace" font-size="13" font-weight="600" fill="#fce7f3" fill-opacity="0.95" text-anchor="middle" letter-spacing="1">CONSUMO  ·  Power BI  ·  IA (RAG, MCP)</text>
+<rect x="32" y="446" width="22" height="12" rx="3" fill="#ec4899" fill-opacity="0.15" stroke="#f9a8d4" stroke-opacity="0.75"/>
+<text x="62" y="456" font-family="ui-monospace,'SF Mono',SFMono-Regular,Menlo,Consolas,monospace" font-size="11.5" font-weight="400" fill="#fce7f3" fill-opacity="0.7" text-anchor="start" letter-spacing="0">fluxo de dados</text>
+<rect x="230" y="446" width="22" height="12" rx="3" fill="#7c3aed" fill-opacity="0.15" stroke="#a855f7" stroke-opacity="0.75" stroke-dasharray="4 3"/>
+<text x="260" y="456" font-family="ui-monospace,'SF Mono',SFMono-Regular,Menlo,Consolas,monospace" font-size="11.5" font-weight="400" fill="#fce7f3" fill-opacity="0.7" text-anchor="start" letter-spacing="0">transversal a toda a plataforma</text>
+</svg>
