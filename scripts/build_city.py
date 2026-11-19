@@ -54,14 +54,14 @@ TEXT = {
         "tag": "CONTRIBUTION.CITY",
         "sub": "> cada quarteirão é uma semana, cada lote um dia",
         "total": "{n} contribuições no último ano",
-        "caption": "dados do GitHub, atualizados todo dia por um GitHub Action",
+        "caption": "dados do GitHub e clima de São Paulo, atualizados a cada 3 horas",
         "label": "Cidade animada das contribuições no GitHub: {n} no último ano",
     },
     "en": {
         "tag": "CONTRIBUTION.CITY",
         "sub": "> each block is a week, each lot a day",
         "total": "{n} contributions in the last year",
-        "caption": "GitHub data, refreshed daily by a GitHub Action",
+        "caption": "GitHub data and São Paulo weather, refreshed every 3 hours",
         "label": "Animated city of GitHub contributions: {n} in the last year",
     },
 }
@@ -295,12 +295,12 @@ def stars(rng, iso, cols, rows):
 # --------------------------------------------------------------------------
 # Eventos do dia: clima sorteado pela data, mais Natal e Ano-Novo
 # --------------------------------------------------------------------------
-WEATHER = ["clear", "sun", "rain", "fog", "plane"]
+WEATHER = ["clear", "sun", "cloudy", "rain", "storm", "fog", "plane"]
 EVENT_LABEL = {
-    "pt": {"clear": "noite limpa", "sun": "pôr do sol", "rain": "chuva", "fog": "névoa",
-           "plane": "tráfego aéreo", "christmas": "Feliz Natal", "newyear": "Feliz {year}"},
-    "en": {"clear": "clear night", "sun": "sunset", "rain": "rain", "fog": "fog",
-           "plane": "air traffic", "christmas": "Merry Christmas", "newyear": "Happy {year}"},
+    "pt": {"clear": "céu limpo", "sun": "sol", "cloudy": "nublado", "rain": "chuva", "storm": "tempestade", "fog": "névoa",
+           "plane": "poucas nuvens", "christmas": "Feliz Natal", "newyear": "Feliz {year}"},
+    "en": {"clear": "clear sky", "sun": "sunny", "cloudy": "cloudy", "rain": "rain", "storm": "storm", "fog": "fog",
+           "plane": "partly cloudy", "christmas": "Merry Christmas", "newyear": "Happy {year}"},
 }
 
 
@@ -312,6 +312,38 @@ def today_sp() -> date:
         return datetime.now(ZoneInfo("America/Sao_Paulo")).date()
     except Exception:
         return date.today()
+
+
+SP_WEATHER_URL = ("https://api.open-meteo.com/v1/forecast?latitude=-23.55&longitude=-46.63"
+                  "&current=weather_code,is_day&timezone=America%2FSao_Paulo")
+
+
+def weather_event(code: int, is_day: bool) -> str:
+    """Converte o código WMO do tempo atual em um evento da cidade."""
+    if code in (45, 48):
+        return "fog"
+    if code >= 95:
+        return "storm"
+    if 51 <= code <= 67 or 80 <= code <= 82:
+        return "rain"
+    if 71 <= code <= 77 or code in (85, 86):
+        return "fog"            # neve não acontece em SP; fica a névoa
+    if code == 3:
+        return "cloudy"
+    if code == 2:
+        return "plane"          # poucas nuvens: céu aberto para o tráfego aéreo
+    return "sun" if is_day else "clear"
+
+
+def weather_sp() -> str | None:
+    """Tempo agora em São Paulo (Open-Meteo, sem chave). None se a consulta falhar."""
+    try:
+        with urllib.request.urlopen(SP_WEATHER_URL, timeout=15) as resp:
+            cur = json.load(resp)["current"]
+        return weather_event(int(cur["weather_code"]), bool(cur["is_day"]))
+    except Exception as exc:  # sem rede ou API fora: o sorteio assume
+        print(f"clima de SP indisponível ({exc}); usando sorteio", file=sys.stderr)
+        return None
 
 
 def pick_event(day: date) -> str:
@@ -486,12 +518,20 @@ def event_back(event: str, rng: random.Random) -> str:
         return moon(735, 105) + shooting_stars(rng)
     if event == "sun":
         return sun_scene(rng) + birds(rng)
-    if event == "rain":
+    if event in ("rain", "storm", "cloudy"):
+        dark = event != "cloudy"
         clouds = "".join(
             f'<ellipse cx="{rng.uniform(40, W - 40):.0f}" cy="{rng.uniform(40, 120):.0f}" rx="{rng.uniform(110, 190):.0f}" '
-            f'ry="{rng.uniform(26, 40):.0f}" fill="#0b0716" fill-opacity="0.85" filter="url(#c-blur)">'
+            f'ry="{rng.uniform(26, 40):.0f}" fill="{"#0b0716" if dark else "#3b2a5c"}" fill-opacity="{0.85 if dark else 0.7}" filter="url(#c-blur)">'
             f'<animateTransform attributeName="transform" type="translate" values="-30 0;30 0;-30 0" '
             f'dur="{rng.uniform(30, 45):.0f}s" repeatCount="indefinite"/></ellipse>' for _ in range(8))
+        if not dark:
+            clouds += "".join(
+                f'<g><ellipse cx="{rng.uniform(-100, W):.0f}" cy="{rng.uniform(40, 230):.0f}" rx="{rng.uniform(90, 160):.0f}" '
+                f'ry="{rng.uniform(22, 34):.0f}" fill="#8b7bb8" fill-opacity="{rng.uniform(0.35, 0.55):.2f}" filter="url(#c-blur)"/>'
+                f'<animateTransform attributeName="transform" type="translate" values="-160 0;{W + 160} 0" '
+                f'dur="{rng.uniform(70, 110):.0f}s" begin="-{rng.uniform(0, 110):.0f}s" repeatCount="indefinite"/></g>'
+                for _ in range(10))
         return clouds
     if event == "plane":
         far = ('<g><path d="M-6 0 L5 -0.6 L7 0 L5 0.6 Z M0 0 L-2 -3.5 L-0.5 -3.5 L2.5 0 Z M0 0 L-2 3.5 L-0.5 3.5 L2.5 0 Z" '
@@ -524,7 +564,7 @@ def event_back(event: str, rng: random.Random) -> str:
 
 def event_front(event: str, rng: random.Random, iso: "Iso", cols: float, rows: float, year: int) -> str:
     """Camada na frente da cidade (chuva, névoa, neve, fogos, árvore)."""
-    if event == "rain":
+    if event in ("rain", "storm"):
         far = falling_field(rng, 160, W, H, lambda x, y: f'<line x1="{x:.0f}" y1="{y:.0f}" x2="{x - 2:.0f}" y2="{y + 8:.0f}" '
                             'stroke="#a78bfa" stroke-opacity="0.35" stroke-width="0.7"/>', 1.3)
         near = falling_field(rng, 70, W, H, lambda x, y: f'<line x1="{x:.0f}" y1="{y:.0f}" x2="{x - 4:.0f}" y2="{y + 16:.0f}" '
@@ -548,7 +588,7 @@ def event_front(event: str, rng: random.Random, iso: "Iso", cols: float, rows: f
                  '<animate attributeName="opacity" values="0;0;0.3;0;0.16;0;0" keyTimes="0;0.8;0.805;0.82;0.835;0.85;1" '
                  'dur="11s" repeatCount="indefinite"/></rect>')
         return (f'<rect width="{W}" height="{H}" fill="#05030b" fill-opacity="0.32"/>' + far + "".join(splashes)
-                + near + bolt + flash)
+                + near + (bolt + flash if event == "storm" else ""))
     if event == "fog":
         lamps = []
         for _ in range(26):
@@ -619,7 +659,7 @@ def event_front(event: str, rng: random.Random, iso: "Iso", cols: float, rows: f
     return ""
 
 
-def render(lang: str, days: list[int], total: int, event: str = "clear", day: date | None = None) -> str:
+def render(lang: str, days: list[int], total: int, event: str = "clear", day: date | None = None, live: bool = False) -> str:
     day = day or today_sp()
     ev_rng = random.Random(day.toordinal() * 7 + 1)   # separado do layout da cidade
     year = day.year + 1 if day.month == 12 else day.year
@@ -669,7 +709,7 @@ def render(lang: str, days: list[int], total: int, event: str = "clear", day: da
         f'<clipPath id="c-frame"><rect x="1" y="1" width="{W - 2}" height="{H - 2}" rx="18"/></clipPath>' + GLOW_DEFS + '</defs>',
         '<g clip-path="url(#c-frame)">',
         f'<rect width="{W}" height="{H}" fill="url(#c-bg)"/><rect width="{W}" height="{H}" fill="url(#c-glow)"/>',
-        stars_svg if event not in ("sun", "rain", "fog") else "",
+        stars_svg if event not in ("sun", "rain", "storm", "cloudy", "fog") else "",
         event_back(event, ev_rng),
         ground(iso, cols, rows),
         lot_tiles(iso, len(days)),
@@ -678,7 +718,7 @@ def render(lang: str, days: list[int], total: int, event: str = "clear", day: da
         event_front(event, ev_rng, iso, cols, rows, year),
         f'<rect x="0" y="{H - 34}" width="{W}" height="34" fill="#07060d" fill-opacity="0.7"/>',
         text(32, H - 13, t["caption"], MONO, 11.5, 400, CREAM, 0.6),
-        text(W - 32, H - 13, EVENT_LABEL[lang][event].format(year=year),
+        text(W - 32, H - 13, ("São Paulo · " if live else "") + EVENT_LABEL[lang][event].format(year=year),
              MONO, 11.5, 700, PINK_L if event in ("christmas", "newyear") else CREAM,
              1 if event in ("christmas", "newyear") else 0.75, "end"),
         "</g>",
@@ -700,7 +740,15 @@ def main() -> int:
     ap.add_argument("--date", help="data AAAA-MM-DD usada para escolher o evento (padrão: hoje em São Paulo)")
     args = ap.parse_args()
     day = date.fromisoformat(args.date) if args.date else today_sp()
-    event = args.event or pick_event(day)
+    live = False
+    if args.event:
+        event = args.event
+    else:
+        event = pick_event(day)
+        if event not in ("christmas", "newyear") and not args.date:
+            ev = weather_sp()
+            if ev:
+                event, live = ev, True
 
     if args.days_json:
         days, total = days_from_json(json.loads(Path(args.days_json).read_text()))
@@ -714,7 +762,7 @@ def main() -> int:
     out = Path(args.out)
     out.mkdir(parents=True, exist_ok=True)
     for lang in TEXT:
-        (out / f"city-{lang}.svg").write_text(render(lang, days, total, event, day), encoding="utf-8")
+        (out / f"city-{lang}.svg").write_text(render(lang, days, total, event, day, live), encoding="utf-8")
     active = sum(1 for d in days if d)
     print(f"{len(days)} dias, {active} com contribuição, {total} no total, pico de {max(days)} num dia; evento: {event} ({day})")
     return 0

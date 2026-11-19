@@ -2,7 +2,7 @@ name: Atualizar cidade de contribuições
 
 on:
   schedule:
-    - cron: "23 6 * * *"   # todo dia, 03:23 em Brasília
+    - cron: "23 */3 * * *"   # a cada 3 horas, para acompanhar o tempo em São Paulo
   workflow_dispatch:
   push:
     branches: [main]
