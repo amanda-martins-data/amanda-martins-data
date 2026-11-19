@@ -3,8 +3,8 @@
 <p align="center"><img src="assets/hero-pt.svg" width="860" alt="Amanda Martins, Engenharia de Dados e Analytics Engineering" /></p>
 
 <p align="center">
-<a href="https://www.linkedin.com/in/amandamartinsdts/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" /></a>
-<a href="mailto:amanda_mdantas@outlook.com"><img src="https://img.shields.io/badge/Email-D14836?style=flat-square&logo=gmail&logoColor=white" /></a>
+<a href="https://www.linkedin.com/in/amandamartinsdts/"><img src="assets/contact-linkedin.svg" height="40" alt="LinkedIn" /></a>
+<a href="mailto:amanda_mdantas@outlook.com"><img src="assets/contact-email.svg" height="40" alt="Email" /></a>
 </p>
 
 Engenheira de dados. No trabalho, construo pipelines em produção no Azure; no portfólio, uma plataforma de dados completa sobre um único domínio, da ingestão à governança. Busco posições de **Engenharia de Dados** ou **Analytics Engineering**, remotas ou híbridas.
@@ -103,8 +103,8 @@ Quatorze projetos, um domínio: qualidade do ar e clima no Brasil. Cada projeto 
 ---
 
 <p align="center">
-<a href="https://www.linkedin.com/in/amandamartinsdts/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" /></a>
-<a href="mailto:amanda_mdantas@outlook.com"><img src="https://img.shields.io/badge/Email-D14836?style=flat-square&logo=gmail&logoColor=white" /></a>
+<a href="https://www.linkedin.com/in/amandamartinsdts/"><img src="assets/contact-linkedin.svg" height="40" alt="LinkedIn" /></a>
+<a href="mailto:amanda_mdantas@outlook.com"><img src="assets/contact-email.svg" height="40" alt="Email" /></a>
 </p>
 
 <p align="center"><sub>Amanda Martins · layout inspirado no template <a href="https://www.gitskins.com/readme-generator?template=community-builder-s-workbench-city-edition-9udn">Builder’s Workbench — City Edition</a>, de <a href="https://www.gitskins.com/creators/pengusto">@pengusto</a> no GitSkins</sub></p>

@@ -3,8 +3,8 @@
 <p align="center"><img src="assets/hero-en.svg" width="860" alt="Amanda Martins, Data Engineering and Analytics Engineering" /></p>
 
 <p align="center">
-<a href="https://www.linkedin.com/in/amandamartinsdts/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" /></a>
-<a href="mailto:amanda_mdantas@outlook.com"><img src="https://img.shields.io/badge/Email-D14836?style=flat-square&logo=gmail&logoColor=white" /></a>
+<a href="https://www.linkedin.com/in/amandamartinsdts/"><img src="assets/contact-linkedin.svg" height="40" alt="LinkedIn" /></a>
+<a href="mailto:amanda_mdantas@outlook.com"><img src="assets/contact-email.svg" height="40" alt="Email" /></a>
 </p>
 
 Data engineer. At work, I build production pipelines on Azure; in my portfolio, a complete data platform around a single domain, from ingestion to governance. Looking for **Data Engineering** or **Analytics Engineering** roles, remote or hybrid.
@@ -103,8 +103,8 @@ Fourteen projects, one domain: air quality and climate in Brazil. Each project s
 ---
 
 <p align="center">
-<a href="https://www.linkedin.com/in/amandamartinsdts/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" /></a>
-<a href="mailto:amanda_mdantas@outlook.com"><img src="https://img.shields.io/badge/Email-D14836?style=flat-square&logo=gmail&logoColor=white" /></a>
+<a href="https://www.linkedin.com/in/amandamartinsdts/"><img src="assets/contact-linkedin.svg" height="40" alt="LinkedIn" /></a>
+<a href="mailto:amanda_mdantas@outlook.com"><img src="assets/contact-email.svg" height="40" alt="Email" /></a>
 </p>
 
 <p align="center"><sub>Amanda Martins · layout inspired by the <a href="https://www.gitskins.com/readme-generator?template=community-builder-s-workbench-city-edition-9udn">Builder’s Workbench — City Edition</a> template by <a href="https://www.gitskins.com/creators/pengusto">@pengusto</a> on GitSkins</sub></p>
