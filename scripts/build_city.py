@@ -381,28 +381,127 @@ def birds(rng):
     return "".join(out)
 
 
+def sun_scene(rng):
+    """Sol synthwave com coroa de raios uniforme girando devagar."""
+    def rays(step, width, length, offset=0.0):
+        out = []
+        for k in range(int(360 / step)):
+            a = math.radians(offset + k * step)
+            b = math.radians(offset + k * step + width)
+            out.append(f'<polygon points="0,0 {length * math.cos(a):.1f},{length * math.sin(a):.1f} '
+                       f'{length * math.cos(b):.1f},{length * math.sin(b):.1f}"/>')
+        return "".join(out)
+    streaks = "".join(
+        f'<rect x="{-90 + k * 18}" y="{14 + k * 13}" width="{150 - k * 20}" height="{4 - k}" rx="2" fill="#3b0764" opacity="0.6">'
+        f'<animateTransform attributeName="transform" type="translate" values="-18 0;18 0;-18 0" dur="{20 + k * 6}s" repeatCount="indefinite"/></rect>'
+        for k in range(3))
+    stripes = "".join(f'<rect x="-60" y="{y}" width="120" height="{h}" fill="#000"/>'
+                      for y, h in [(4, 2), (12, 3), (21, 4), (31, 5)])
+    return ('<defs><linearGradient id="c-dusk" x1="0" y1="0" x2="0" y2="1">'
+            '<stop offset="0" stop-color="#2a1250" stop-opacity="0.3"/><stop offset="0.35" stop-color="#be185d" stop-opacity="0.32"/>'
+            '<stop offset="0.6" stop-color="#fb923c" stop-opacity="0.18"/><stop offset="1" stop-color="#fb923c" stop-opacity="0"/></linearGradient>'
+            '<radialGradient id="c-ray" gradientUnits="userSpaceOnUse" cx="0" cy="0" r="520">'
+            '<stop offset="0" stop-color="#fde68a" stop-opacity="0.42"/><stop offset="0.2" stop-color="#fbbf24" stop-opacity="0.17"/>'
+            '<stop offset="0.55" stop-color="#fb923c" stop-opacity="0.07"/><stop offset="1" stop-color="#fb923c" stop-opacity="0"/></radialGradient>'
+            '<radialGradient id="c-sunfill" cx="50%" cy="0%" r="100%"><stop offset="0" stop-color="#fef3c7"/>'
+            f'<stop offset="0.5" stop-color="#fb923c"/><stop offset="1" stop-color="{PINK}"/></radialGradient>'
+            '<mask id="c-stripes"><rect x="-60" y="-60" width="120" height="120" fill="#fff"/>' + stripes + '</mask></defs>'
+            f'<rect width="{W}" height="{H}" fill="url(#c-dusk)"/>'
+            '<g transform="translate(720 150)">'
+            f'<g fill="url(#c-ray)">{rays(15, 6, 520)}<animateTransform attributeName="transform" type="rotate" '
+            'values="0;360" dur="120s" repeatCount="indefinite"/></g>'
+            f'<g fill="url(#c-ray)" opacity="0.7">{rays(15, 2, 400, 7.5)}<animateTransform attributeName="transform" type="rotate" '
+            'values="360;0" dur="160s" repeatCount="indefinite"/></g>'
+            '<circle r="84" fill="#fb923c" opacity="0.18" filter="url(#c-glow8)"><animate attributeName="r" values="78;92;78" dur="5s" repeatCount="indefinite"/></circle>'
+            '<circle r="60" fill="#fdba74" opacity="0.4" filter="url(#c-glow8)"><animate attributeName="opacity" values="0.3;0.5;0.3" dur="3.5s" repeatCount="indefinite"/></circle>'
+            '<circle r="47" fill="none" stroke="#fde68a" stroke-opacity="0.35" stroke-width="1.5"/>'
+            '<g mask="url(#c-stripes)"><circle r="44" fill="url(#c-sunfill)"/></g>' + streaks + '</g>')
+
+
+def xmas_tree(rng, x, y):
+    """Árvore de Natal com camadas sombreadas, neve, guirlandas de luzes em sequência,
+    bolas, estrela com raios e presentes isométricos na base."""
+    out = [f'<ellipse cx="{x:.0f}" cy="{y + 4:.0f}" rx="78" ry="30" fill="#fde68a" opacity="0.2" filter="url(#c-glow8)">'
+           '<animate attributeName="opacity" values="0.14;0.26;0.14" dur="3s" repeatCount="indefinite"/></ellipse>',
+           f'<circle cx="{x:.0f}" cy="{y - 60:.0f}" r="62" fill="#4ade80" opacity="0.08" filter="url(#c-glow8)"/>',
+           f'<rect x="{x - 5:.0f}" y="{y - 16:.0f}" width="10" height="18" fill="#92400e"/>'
+           f'<rect x="{x:.0f}" y="{y - 16:.0f}" width="5" height="18" fill="#451a03" opacity="0.6"/>']
+    tiers = [(42, 12, 34), (35, 35, 32), (28, 57, 29), (20, 77, 26), (13, 95, 22)]
+    colors = ["#ef4444", "#fde047", "#60a5fa", "#f472b6", "#c084fc", "#ffffff", "#4ade80"]
+    bulb_i = 0
+    for t, (wd, b, h) in enumerate(tiers):
+        base, apex = y - b, y - b - h
+        n = 6
+        sc = "".join(f' Q{x - wd + (i + 0.5) * 2 * wd / n:.1f},{base + 6:.1f} {x - wd + (i + 1) * 2 * wd / n:.1f},{base:.1f}' for i in range(n))
+        out.append(f'<path d="M{x - wd:.1f},{base:.1f}{sc} L{x:.1f},{apex:.1f} Z" fill="#15803d"/>')
+        out.append(f'<path d="M{x:.1f},{apex:.1f} L{x + wd:.1f},{base:.1f}'
+                   + "".join(f' Q{x + wd - (i + 0.5) * 2 * wd / n:.1f},{base + 6:.1f} {x + wd - (i + 1) * 2 * wd / n:.1f},{base:.1f}' for i in range(n // 2))
+                   + ' Z" fill="#052e16" opacity="0.5"/>')
+        out.append(f'<line x1="{x:.1f}" y1="{apex:.1f}" x2="{x - wd:.1f}" y2="{base:.1f}" stroke="#86efac" stroke-opacity="0.55" stroke-width="1"/>')
+        out.append("".join(f'<ellipse cx="{x - wd + (i + 0.5) * 2 * wd / n:.1f}" cy="{base + 4.5:.1f}" rx="{wd / n * 0.7:.1f}" ry="1.6" '
+                           f'fill="#ffffff" opacity="{0.9 if i < n / 2 else 0.55}"/>' for i in range(n)))
+        # guirlanda diagonal com luzes em sequência
+        p0 = (x - wd * 0.9, base - h * 0.08)
+        p2 = (x + wd * 0.75, base - h * 0.55)
+        p1 = ((p0[0] + p2[0]) / 2, (p0[1] + p2[1]) / 2 + 9)
+        out.append(f'<path d="M{p0[0]:.1f},{p0[1]:.1f} Q{p1[0]:.1f},{p1[1]:.1f} {p2[0]:.1f},{p2[1]:.1f}" fill="none" '
+                   'stroke="#fde68a" stroke-opacity="0.5" stroke-width="0.8"/>')
+        k = max(4, int(wd / 5))
+        for j in range(k):
+            u = (j + 0.5) / k
+            bx = (1 - u) ** 2 * p0[0] + 2 * (1 - u) * u * p1[0] + u * u * p2[0]
+            by = (1 - u) ** 2 * p0[1] + 2 * (1 - u) * u * p1[1] + u * u * p2[1]
+            c = colors[bulb_i % len(colors)]
+            begin = bulb_i * 0.11
+            bulb_i += 1
+            out.append(f'<g><circle cx="{bx:.1f}" cy="{by:.1f}" r="4" fill="{c}" opacity="0.35"/>'
+                       f'<circle cx="{bx:.1f}" cy="{by:.1f}" r="1.9" fill="{c}"/>'
+                       f'<animate attributeName="opacity" values="0.25;1;0.25" dur="2.2s" begin="-{begin:.2f}s" repeatCount="indefinite"/></g>')
+        # bolas
+        for _ in range(2 if t < 4 else 0):
+            v = rng.uniform(0.3, 0.6)
+            half = wd * (1 - v) * 0.75
+            ox, oy = x + rng.uniform(-half, half), base - h * v
+            c = rng.choice(["#ef4444", "#f472b6", "#a855f7", "#fbbf24", "#38bdf8"])
+            out.append(f'<circle cx="{ox:.1f}" cy="{oy:.1f}" r="3" fill="{c}"/>'
+                       f'<circle cx="{ox - 1:.1f}" cy="{oy - 1:.1f}" r="0.9" fill="#ffffff" opacity="0.8"/>')
+    # estrela com raios girando
+    sy = y - 95 - 22 - 4
+    pts = " ".join(f'{x + (9 if i % 2 == 0 else 4) * math.sin(math.radians(i * 36)):.1f},'
+                   f'{sy - (9 if i % 2 == 0 else 4) * math.cos(math.radians(i * 36)):.1f}' for i in range(10))
+    beams = "".join(f'<polygon points="0,0 {30 * math.cos(math.radians(a)):.1f},{30 * math.sin(math.radians(a)):.1f} '
+                    f'{30 * math.cos(math.radians(a + 6)):.1f},{30 * math.sin(math.radians(a + 6)):.1f}"/>' for a in range(0, 360, 30))
+    out.append(f'<g transform="translate({x:.0f} {sy:.0f})"><g fill="#fde68a" opacity="0.35">{beams}'
+               '<animateTransform attributeName="transform" type="rotate" values="0;360" dur="14s" repeatCount="indefinite"/></g>'
+               '<circle r="14" fill="#fde047" opacity="0.5" filter="url(#c-glow3)">'
+               '<animate attributeName="opacity" values="0.3;0.8;0.3" dur="2s" repeatCount="indefinite"/></circle></g>'
+               f'<polygon points="{pts}" fill="#fde047" stroke="#fef9c3" stroke-width="0.8"/>')
+    # presentes isométricos
+    def gift(gx, gy, s, h, top, left, right):
+        t = s * 0.5
+        rib = "#fde68a"
+        return (f'<polygon points="{gx - s:.1f},{gy - h:.1f} {gx:.1f},{gy - h + t:.1f} {gx:.1f},{gy + t:.1f} {gx - s:.1f},{gy:.1f}" fill="{left}"/>'
+                f'<polygon points="{gx + s:.1f},{gy - h:.1f} {gx:.1f},{gy - h + t:.1f} {gx:.1f},{gy + t:.1f} {gx + s:.1f},{gy:.1f}" fill="{right}"/>'
+                f'<polygon points="{gx:.1f},{gy - h - t:.1f} {gx + s:.1f},{gy - h:.1f} {gx:.1f},{gy - h + t:.1f} {gx - s:.1f},{gy - h:.1f}" fill="{top}"/>'
+                f'<line x1="{gx - s / 2:.1f}" y1="{gy - h + t / 2:.1f}" x2="{gx - s / 2:.1f}" y2="{gy + t / 2:.1f}" stroke="{rib}" stroke-width="1.4"/>'
+                f'<line x1="{gx + s / 2:.1f}" y1="{gy - h + t / 2:.1f}" x2="{gx + s / 2:.1f}" y2="{gy + t / 2:.1f}" stroke="{rib}" stroke-width="1.4"/>'
+                f'<line x1="{gx - s / 2:.1f}" y1="{gy - h - t / 2:.1f}" x2="{gx + s / 2:.1f}" y2="{gy - h + t / 2:.1f}" stroke="{rib}" stroke-width="1.4"/>'
+                f'<line x1="{gx + s / 2:.1f}" y1="{gy - h - t / 2:.1f}" x2="{gx - s / 2:.1f}" y2="{gy - h + t / 2:.1f}" stroke="{rib}" stroke-width="1.4"/>'
+                f'<circle cx="{gx - 2:.1f}" cy="{gy - h - 1.5:.1f}" r="1.8" fill="none" stroke="{rib}" stroke-width="1.2"/>'
+                f'<circle cx="{gx + 2:.1f}" cy="{gy - h - 1.5:.1f}" r="1.8" fill="none" stroke="{rib}" stroke-width="1.2"/>')
+    out.append(gift(x - 30, y + 2, 10, 11, "#f9a8d4", "#ec4899", "#9d174d")
+               + gift(x + 30, y + 1, 9, 9, "#c4b5fd", "#8b5cf6", "#5b21b6")
+               + gift(x + 13, y + 13, 7, 7, "#a5f3fc", "#22d3ee", "#0e7490")
+               + gift(x - 14, y + 14, 8, 6, "#fde68a", "#f59e0b", "#92400e"))
+    return "".join(out)
+
+
 def event_back(event: str, rng: random.Random) -> str:
     """Camada atrás da cidade (céu)."""
     if event == "clear":
         return moon(735, 105) + shooting_stars(rng)
     if event == "sun":
-        stripes = "".join(f'<rect x="-60" y="{y}" width="120" height="{h}" fill="#000"/>'
-                          for y, h in [(6, 2), (14, 3), (23, 4), (33, 5)])
-        beams = "".join(
-            f'<polygon points="0,0 {-560 * math.cos(math.radians(a)):.0f},{560 * math.sin(math.radians(a)):.0f} '
-            f'{-560 * math.cos(math.radians(a + 4)):.0f},{560 * math.sin(math.radians(a + 4)):.0f}" fill="#fde68a" fill-opacity="0.07"/>'
-            for a in range(4, 70, 11))
-        return ('<defs><linearGradient id="c-dusk" x1="0" y1="0" x2="0" y2="1">'
-                '<stop offset="0" stop-color="#2a1250" stop-opacity="0.3"/><stop offset="0.35" stop-color="#be185d" stop-opacity="0.32"/>'
-                '<stop offset="0.6" stop-color="#fb923c" stop-opacity="0.18"/><stop offset="1" stop-color="#fb923c" stop-opacity="0"/></linearGradient>'
-                '<radialGradient id="c-sunfill" cx="50%" cy="0%" r="100%"><stop offset="0" stop-color="#fde68a"/>'
-                f'<stop offset="0.6" stop-color="#fb923c"/><stop offset="1" stop-color="{PINK}"/></radialGradient>'
-                '<mask id="c-stripes"><rect x="-60" y="-60" width="120" height="120" fill="#fff"/>' + stripes + '</mask></defs>'
-                f'<rect width="{W}" height="{H}" fill="url(#c-dusk)"/>'
-                f'<g transform="translate(720 150)"><g>{beams}<animateTransform attributeName="transform" type="rotate" '
-                'values="-4;4;-4" dur="18s" repeatCount="indefinite"/></g>'
-                '<circle r="70" fill="#fb923c" opacity="0.35" filter="url(#c-glow8)"/>'
-                '<g mask="url(#c-stripes)"><circle r="44" fill="url(#c-sunfill)"/></g></g>' + birds(rng))
+        return sun_scene(rng) + birds(rng)
     if event == "rain":
         clouds = "".join(
             f'<ellipse cx="{rng.uniform(40, W - 40):.0f}" cy="{rng.uniform(40, 120):.0f}" rx="{rng.uniform(110, 190):.0f}" '
@@ -494,29 +593,8 @@ def event_front(event: str, rng: random.Random, iso: "Iso", cols: float, rows: f
     if event == "christmas":
         far = falling_field(rng, 110, W, H, lambda x, y: f'<circle cx="{x:.0f}" cy="{y:.0f}" r="1" fill="#ffffff" fill-opacity="0.6"/>', 14, sway=6)
         near = falling_field(rng, 45, W, H, lambda x, y: f'<circle cx="{x:.0f}" cy="{y:.0f}" r="2.1" fill="#ffffff" fill-opacity="0.9"/>', 8, sway=12)
-        x, y = iso.p(cols / 2, rows / 2)
-        layers = "".join(
-            f'<polygon points="{x - wd:.0f},{y - b:.0f} {x + wd:.0f},{y - b:.0f} {x:.0f},{y - b - 30:.0f}" fill="#166534" stroke="#22c55e" stroke-width="0.8"/>'
-            for wd, b in [(32, 10), (26, 32), (19, 54), (12, 74)])
-        colors = ["#ef4444", "#fde68a", "#60a5fa", "#f472b6", "#a855f7", "#ffffff"]
-        bulbs = []
-        for k in range(18):
-            lvl = k // 5
-            wd, b = [(32, 10), (26, 32), (19, 54), (12, 74)][min(lvl, 3)]
-            frac = (k % 5) / 4
-            bx, by = x - wd * 0.8 + frac * wd * 1.6, y - b - 4 - rng.uniform(0, 8)
-            d = rng.uniform(0.9, 1.8)
-            bulbs.append(f'<circle cx="{bx:.0f}" cy="{by:.0f}" r="2.1" fill="{colors[k % 6]}">'
-                         f'<animate attributeName="opacity" values="1;0.15;1" dur="{d:.1f}s" begin="-{rng.uniform(0, d):.1f}s" repeatCount="indefinite"/></circle>')
-        star = (f'<polygon points="{x:.0f},{y - 118:.0f} {x + 3.5:.0f},{y - 108:.0f} {x + 11:.0f},{y - 108:.0f} {x + 5:.0f},{y - 102:.0f} '
-                f'{x + 7:.0f},{y - 93:.0f} {x:.0f},{y - 98:.0f} {x - 7:.0f},{y - 93:.0f} {x - 5:.0f},{y - 102:.0f} {x - 11:.0f},{y - 108:.0f} '
-                f'{x - 3.5:.0f},{y - 108:.0f}" fill="#fde047"/>')
-        tree_svg = (f'<circle cx="{x:.0f}" cy="{y - 60:.0f}" r="58" fill="#fde68a" opacity="0.18" filter="url(#c-glow8)">'
-                    '<animate attributeName="opacity" values="0.12;0.24;0.12" dur="3s" repeatCount="indefinite"/></circle>'
-                    f'<rect x="{x - 5:.0f}" y="{y - 10:.0f}" width="10" height="12" fill="#78350f"/>{layers}{"".join(bulbs)}'
-                    f'<circle cx="{x:.0f}" cy="{y - 104:.0f}" r="12" fill="#fde047" opacity="0.5" filter="url(#c-glow3)">'
-                    '<animate attributeName="opacity" values="0.3;0.7;0.3" dur="2s" repeatCount="indefinite"/></circle>{star}')
-        return far + tree_svg + near
+        x, y = iso.p(cols * 0.66, rows * 0.22)
+        return far + xmas_tree(rng, x, y) + near
     if event == "newyear":
         colors = ["#f472b6", "#fde047", "#67e8f9", "#ffffff", "#c084fc", "#fb923c", "#4ade80"]
         out = []
