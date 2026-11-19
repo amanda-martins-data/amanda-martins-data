@@ -98,7 +98,7 @@ Fourteen projects, one domain: air quality and climate in Brazil. Each project s
 
 </details>
 
-<p align="center"><img src="https://www.gitskins.com/api/section/city?username=amanda-martins-data&theme=retro" width="860" alt="GitHub contribution skyline" /></p>
+<p align="center"><img src="assets/city-en.svg" width="860" alt="Animated city of GitHub contributions: each block is a week and each lot a day" /></p>
 
 ---
 
@@ -107,4 +107,4 @@ Fourteen projects, one domain: air quality and climate in Brazil. Each project s
 <a href="mailto:amanda_mdantas@outlook.com"><img src="https://img.shields.io/badge/Email-D14836?style=flat-square&logo=gmail&logoColor=white" /></a>
 </p>
 
-<p align="center"><sub>Amanda Martins · layout inspired by the <a href="https://www.gitskins.com/readme-generator?template=community-builder-s-workbench-city-edition-9udn">Builder’s Workbench — City Edition</a> template by <a href="https://www.gitskins.com/creators/pengusto">@pengusto</a> on GitSkins</sub></p>
+<p align="center"><sub>Amanda Martins · layout inspired by the <a href="https://www.gitskins.com/readme-generator?template=community-builder-s-workbench-city-edition-9udn">Builder’s Workbench — City Edition</a> template by <a href="https://www.gitskins.com/creators/pengusto">@pengusto</a> on GitSkins · animated city inspired by <a href="https://github.com/Famel-svg">@Famel-svg</a>'s</sub></p>
