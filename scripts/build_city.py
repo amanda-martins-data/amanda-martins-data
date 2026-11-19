@@ -382,40 +382,24 @@ def birds(rng):
 
 
 def sun_scene(rng):
-    """Sol synthwave com coroa de raios uniforme girando devagar."""
-    def rays(step, width, length, offset=0.0):
-        out = []
-        for k in range(int(360 / step)):
-            a = math.radians(offset + k * step)
-            b = math.radians(offset + k * step + width)
-            out.append(f'<polygon points="0,0 {length * math.cos(a):.1f},{length * math.sin(a):.1f} '
-                       f'{length * math.cos(b):.1f},{length * math.sin(b):.1f}"/>')
-        return "".join(out)
-    streaks = "".join(
-        f'<rect x="{-90 + k * 18}" y="{14 + k * 13}" width="{150 - k * 20}" height="{4 - k}" rx="2" fill="#3b0764" opacity="0.6">'
-        f'<animateTransform attributeName="transform" type="translate" values="-18 0;18 0;-18 0" dur="{20 + k * 6}s" repeatCount="indefinite"/></rect>'
-        for k in range(3))
+    """Sol synthwave listrado com feixes de luz, céu de entardecer."""
     stripes = "".join(f'<rect x="-60" y="{y}" width="120" height="{h}" fill="#000"/>'
-                      for y, h in [(4, 2), (12, 3), (21, 4), (31, 5)])
+                      for y, h in [(6, 2), (14, 3), (23, 4), (33, 5)])
+    beams = "".join(
+        f'<polygon points="0,0 {-560 * math.cos(math.radians(a)):.0f},{560 * math.sin(math.radians(a)):.0f} '
+        f'{-560 * math.cos(math.radians(a + 4)):.0f},{560 * math.sin(math.radians(a + 4)):.0f}" fill="#fde68a" fill-opacity="0.07"/>'
+        for a in range(4, 70, 11))
     return ('<defs><linearGradient id="c-dusk" x1="0" y1="0" x2="0" y2="1">'
             '<stop offset="0" stop-color="#2a1250" stop-opacity="0.3"/><stop offset="0.35" stop-color="#be185d" stop-opacity="0.32"/>'
             '<stop offset="0.6" stop-color="#fb923c" stop-opacity="0.18"/><stop offset="1" stop-color="#fb923c" stop-opacity="0"/></linearGradient>'
-            '<radialGradient id="c-ray" gradientUnits="userSpaceOnUse" cx="0" cy="0" r="520">'
-            '<stop offset="0" stop-color="#fde68a" stop-opacity="0.42"/><stop offset="0.2" stop-color="#fbbf24" stop-opacity="0.17"/>'
-            '<stop offset="0.55" stop-color="#fb923c" stop-opacity="0.07"/><stop offset="1" stop-color="#fb923c" stop-opacity="0"/></radialGradient>'
-            '<radialGradient id="c-sunfill" cx="50%" cy="0%" r="100%"><stop offset="0" stop-color="#fef3c7"/>'
-            f'<stop offset="0.5" stop-color="#fb923c"/><stop offset="1" stop-color="{PINK}"/></radialGradient>'
+            '<radialGradient id="c-sunfill" cx="50%" cy="0%" r="100%"><stop offset="0" stop-color="#fde68a"/>'
+            f'<stop offset="0.6" stop-color="#fb923c"/><stop offset="1" stop-color="{PINK}"/></radialGradient>'
             '<mask id="c-stripes"><rect x="-60" y="-60" width="120" height="120" fill="#fff"/>' + stripes + '</mask></defs>'
             f'<rect width="{W}" height="{H}" fill="url(#c-dusk)"/>'
-            '<g transform="translate(720 150)">'
-            f'<g fill="url(#c-ray)">{rays(15, 6, 520)}<animateTransform attributeName="transform" type="rotate" '
-            'values="0;360" dur="120s" repeatCount="indefinite"/></g>'
-            f'<g fill="url(#c-ray)" opacity="0.7">{rays(15, 2, 400, 7.5)}<animateTransform attributeName="transform" type="rotate" '
-            'values="360;0" dur="160s" repeatCount="indefinite"/></g>'
-            '<circle r="84" fill="#fb923c" opacity="0.18" filter="url(#c-glow8)"><animate attributeName="r" values="78;92;78" dur="5s" repeatCount="indefinite"/></circle>'
-            '<circle r="60" fill="#fdba74" opacity="0.4" filter="url(#c-glow8)"><animate attributeName="opacity" values="0.3;0.5;0.3" dur="3.5s" repeatCount="indefinite"/></circle>'
-            '<circle r="47" fill="none" stroke="#fde68a" stroke-opacity="0.35" stroke-width="1.5"/>'
-            '<g mask="url(#c-stripes)"><circle r="44" fill="url(#c-sunfill)"/></g>' + streaks + '</g>')
+            f'<g transform="translate(720 150)"><g>{beams}<animateTransform attributeName="transform" type="rotate" '
+            'values="-4;4;-4" dur="18s" repeatCount="indefinite"/></g>'
+            '<circle r="70" fill="#fb923c" opacity="0.35" filter="url(#c-glow8)"/>'
+            '<g mask="url(#c-stripes)"><circle r="44" fill="url(#c-sunfill)"/></g></g>')
 
 
 def xmas_tree(rng, x, y):
