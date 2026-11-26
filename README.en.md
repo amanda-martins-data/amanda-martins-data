@@ -113,7 +113,7 @@ Personal projects on real public data; not client work. Fourteen of them form a 
 | 14 | [Medallion on Snowflake](https://github.com/amanda-martins-data/snowflake-medallion-qualidade-ar) | Native Bronze/Silver/Gold on Snowflake with dbt and RBAC |
 | 15 | [Pix lakehouse on Databricks](https://github.com/amanda-martins-data/lakehouse-pix-databricks) | Medallion with PySpark, Delta Lake, Auto Loader and a Job in an Asset Bundle |
 
-**Next steps:** a municipality dimension shared by Projects 13 and 15, closing Project 15 on Azure Databricks with Terraform, and the Databricks Data Engineer Associate certification, in preparation.
+**Next steps:** run [lakehouse-azure-iac](https://github.com/amanda-martins-data/lakehouse-azure-iac) on Azure, already written and tested in CI (Terraform, Azure Databricks and Unity Catalog, with hourly INMET data in PySpark), and run Project 15 on Azure in the same account; Databricks Data Engineer Associate certification, in preparation.
 
 </details>
 
